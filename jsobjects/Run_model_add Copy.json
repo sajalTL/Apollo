@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Run",
+    "pageId": "model_add Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\trunmultipleActions: () => {\n\t\tupdatemodel.run();\n\t\tstoreValue('tab','Tab 1');\n\t\tresetWidget(\"Tabs1\",true);\n\t\tstoreValue('O',undefined);\n\t\tstoreValue('F',undefined);\n\t\tstoreValue('M',undefined);\n\t\tstoreValue('N',undefined);\n\t\tstoreValue('H',undefined);\n\t\tstoreValue('I',undefined);\n\t\tshowAlert('Data created successfully','success');\n\t\tnavigateTo('model_view', {});\t\t\n\t}\t\n}",
+    "variables": []
+  },
+  "id": "model_add Copy_Run",
+  "deleted": false,
+  "gitSyncId": "6225932e52df83079ac94bc5_624ed1e09c18654bb5892efd"
+}
