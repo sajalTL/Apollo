@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "myFun1",
-    "fullyQualifiedName": "JSObject1.myFun1",
+    "fullyQualifiedName": "Stop_JS.myFun1",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,14 +14,14 @@
       "userPermissions": []
     },
     "pageId": "pipeline_modify",
-    "collectionId": "pipeline_modify_JSObject1",
+    "collectionId": "pipeline_modify_Stop_JS",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\t//write code here\n\t}",
+      "body": "() => {\n\t\tstoreValue('defaultRow',Table1.selectedRowIndex)\n\t\tStopAPI.run(() => \n\t\t\t\t\t\t\t\t update_stopped.run(() => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSelect.run(() => showAlert('Pipeline stopped','success'))), \n\t\t\t\t\t\t\t\t () => showAlert('Error','error'))\n\t}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\t//write code here\n\t}"
+      "() => {\n\t\tstoreValue('defaultRow',Table1.selectedRowIndex)\n\t\tStopAPI.run(() => \n\t\t\t\t\t\t\t\t update_stopped.run(() => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSelect.run(() => showAlert('Pipeline stopped','success'))), \n\t\t\t\t\t\t\t\t () => showAlert('Error','error'))\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -42,5 +42,5 @@
   },
   "id": "pipeline_modify_myFun1",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_626651109c18654bb5892f5a"
+  "gitSyncId": "6225932e52df83079ac94bc5_6285e9459c18654bb5892fb3"
 }

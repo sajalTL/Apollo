@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 650,
+          "bottomRow": 570,
           "containerStyle": "none",
           "snapRows": 60,
           "parentRowSpace": 1,
@@ -1262,8 +1262,9 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton2Copy",
-                              "onClick": "{{resetWidget(\"Form1\")}}",
+                              "onClick": "{{closeModal('Modal2')}}",
                               "buttonColor": "#93BC4D",
+                              "dynamicPropertyPathList": [],
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
                               "topRow": 44,
@@ -2111,7 +2112,13 @@
                             },
                             {
                               "widgetName": "Button2Copy",
+                              "onClick": "{{Start_JS.myFun1()}}",
                               "buttonColor": "#93BC4D",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
                               "topRow": 44,
@@ -2121,11 +2128,19 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 10.0065673828125,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 34,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "text": "Start",
-                              "isDisabled": false,
+                              "isDisabled": "{{Table1.selectedRow.status===\"Running\"}}",
                               "key": "m7gdhva5jk",
                               "rightColumn": 44,
                               "isDefaultClickDisabled": true,
@@ -2278,9 +2293,9 @@
               "isFilterable": false,
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
-              "labelText": "Model",
-              "topRow": 56,
-              "bottomRow": 63,
+              "labelText": "",
+              "topRow": 8,
+              "bottomRow": 15,
               "parentRowSpace": 10,
               "type": "SELECT_WIDGET",
               "serverSideFiltering": false,
@@ -2293,7 +2308,7 @@
                   "key": "onOptionChange"
                 }
               ],
-              "leftColumn": 4,
+              "leftColumn": 51,
               "dynamicBindingPathList": [
                 {
                   "key": "options"
@@ -2308,7 +2323,7 @@
               "isDisabled": false,
               "key": "eedm4erdvo",
               "isRequired": true,
-              "rightColumn": 24,
+              "rightColumn": 60,
               "widgetId": "e1sglv6fi5",
               "isVisible": false,
               "version": 1,
@@ -2514,7 +2529,7 @@
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
-              "defaultSelectedRow": "0",
+              "defaultSelectedRow": "{{appsmith.store.defaultRow}}",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 13.765625,
@@ -2589,6 +2604,9 @@
                 },
                 {
                   "key": "primaryColumns.camera_id.computedValue"
+                },
+                {
+                  "key": "defaultSelectedRow"
                 }
               ],
               "leftColumn": 5,
@@ -4129,7 +4147,13 @@
                             },
                             {
                               "widgetName": "Button2",
+                              "onClick": "{{Stop_JS.myFun1()}}",
                               "buttonColor": "#DD4B34",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
                               "topRow": 44,
@@ -4139,11 +4163,19 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 10.0065673828125,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 34,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "text": "Stop",
-                              "isDisabled": false,
+                              "isDisabled": "{{Table1.selectedRow.status===\"Stopped\"}}",
                               "key": "m7gdhva5jk",
                               "rightColumn": 44,
                               "isDefaultClickDisabled": true,

@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "Start_JS",
+    "pageId": "pipeline_modify",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\tstoreValue('defaultRow',Table1.selectedRowIndex)\n\t\tStartAPI.run(() => \n\t\t\t\t\t\t\t\t update_running.run(() => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSelect.run(() => showAlert('Pipeline started','success'))), \n\t\t\t\t\t\t\t\t () => showAlert('Error','error'))\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "pipeline_modify_Start_JS",
+  "deleted": false,
+  "gitSyncId": "6225932e52df83079ac94bc5_6285e5919c18654bb5892fb1"
+}

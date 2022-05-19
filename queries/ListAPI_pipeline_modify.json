@@ -12,7 +12,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "pipeline_view",
+    "pageId": "pipeline_modify",
     "actionConfiguration": {
       "timeoutInMillisecond": 20000,
       "paginationType": "NONE",
@@ -24,25 +24,20 @@
         },
         {
           "key": "with_attr",
-          "value": "true"
+          "value": "false"
         },
         {
           "key": "all",
           "value": "true"
+        },
+        {
+          "key": "content-type",
+          "value": "application/x-www-form-urlencoded"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "bodyFormData": [
-        {
-          "key": "with_attr",
-          "value": "false"
-        },
-        {
-          "key": "all",
-          "value": "false"
-        }
-      ],
+      "bodyFormData": [],
       "httpMethod": "GET",
       "pluginSpecifiedTemplates": [
         {
@@ -50,10 +45,10 @@
         }
       ],
       "formData": {
-        "apiContentType": "multipart/form-data"
+        "apiContentType": "application/x-www-form-urlencoded"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -64,7 +59,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "pipeline_view_ListAPI",
+  "id": "pipeline_modify_ListAPI",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_626b56259c18654bb5892f7f"
+  "gitSyncId": "6225932e52df83079ac94bc5_6284a7909c18654bb5892fa7"
 }

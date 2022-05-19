@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ListAPI",
+    "name": "StartAPI",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -12,59 +12,54 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "pipeline_view",
+    "pageId": "pipeline_modify",
     "actionConfiguration": {
       "timeoutInMillisecond": 20000,
       "paginationType": "NONE",
-      "path": "/DE_Wrapper_Container/container/list",
+      "path": "/DE_Wrapper_Container/container/start",
       "headers": [
         {
-          "key": "accept",
-          "value": "application/json"
-        },
-        {
-          "key": "with_attr",
-          "value": "true"
-        },
-        {
-          "key": "all",
-          "value": "true"
+          "key": "content-type",
+          "value": "application/x-www-form-urlencoded"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
+      "body": "",
       "bodyFormData": [
         {
-          "key": "with_attr",
-          "value": "false"
-        },
-        {
-          "key": "all",
-          "value": "false"
+          "key": "id",
+          "value": "{{Table1.selectedRow.pipeline_id}}"
         }
       ],
-      "httpMethod": "GET",
+      "httpMethod": "PUT",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
       ],
       "formData": {
-        "apiContentType": "multipart/form-data"
+        "apiContentType": "application/x-www-form-urlencoded"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "bodyFormData[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Table1.selectedRow.pipeline_id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "pipeline_view_ListAPI",
+  "id": "pipeline_modify_StartAPI",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_626b56259c18654bb5892f7f"
+  "gitSyncId": "6225932e52df83079ac94bc5_6284a7279c18654bb5892fa5"
 }

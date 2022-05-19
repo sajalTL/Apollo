@@ -16,16 +16,22 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/container/create",
+      "path": "/DE_Wrapper_Container/container/create",
       "headers": [
         {
           "key": "content-type",
-          "value": "application/json"
+          "value": "application/x-www-form-urlencoded"
         }
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\"pipeline_id\": {{Insert_pipeline.data[0].last_insert_id}}\n}",
+      "body": "",
+      "bodyFormData": [
+        {
+          "key": "pipeline_id",
+          "value": "{{Insert_pipeline.data[0].last_insert_id}}"
+        }
+      ],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
         {
@@ -33,13 +39,13 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "application/x-www-form-urlencoded"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "bodyFormData[0].value"
       }
     ],
     "isValid": true,

@@ -2121,15 +2121,15 @@
                               "leftColumn": 47,
                               "dynamicBindingPathList": [
                                 {
-                                  "key": "text"
+                                  "key": "textColor"
                                 },
                                 {
-                                  "key": "textColor"
+                                  "key": "text"
                                 }
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "The container is {{ListAPI.data.filter(item=>item.short_id===\"3f04fd3756\")[0].status}}.",
+                              "text": "The container is {{ListAPI.data.filter(item=>item.name===\"apollo_\"+Table1.selectedRow.pipeline_id)[0].status}}.",
                               "key": "rsnmzi2p93",
                               "rightColumn": 64,
                               "textAlign": "LEFT",
