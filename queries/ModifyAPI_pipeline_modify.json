@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "CheckFilesAPI",
+    "name": "ModifyAPI",
     "datasource": {
       "pluginId": "restapi-plugin",
       "messages": [],
@@ -12,68 +12,48 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "model_add",
+    "pageId": "pipeline_modify",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/DE_Wrapper_Utility/util/checkfiles",
+      "path": "/DE_Wrapper_Container/container/create",
       "headers": [
         {
           "key": "content-type",
           "value": "application/x-www-form-urlencoded"
-        },
-        {
-          "key": "accept",
-          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
-      "queryParameters": [],
       "body": "",
       "bodyFormData": [
         {
-          "key": "file_location",
-          "value": "s3"
-        },
-        {
-          "key": "weights_file_loc",
-          "value": "models/helmet_detection"
-        },
-        {
-          "key": "weights_file",
-          "value": "helmet_detection_yolov4_tiny_608.zip"
-        },
-        {
-          "key": "classes_file",
-          "value": "helmet.names"
-        },
-        {
-          "key": "classes_file_loc",
-          "value": "models/helmet_detection"
+          "key": "pipeline_id",
+          "value": "{{Table1.selectedRow.pipeline_id}}"
         }
       ],
       "httpMethod": "POST",
-      "pluginSpecifiedTemplates": [
-        {
-          "value": true
-        }
-      ],
       "formData": {
         "apiContentType": "application/x-www-form-urlencoded"
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "bodyFormData[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Table1.selectedRow.pipeline_id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "model_add_CheckFilesAPI",
+  "id": "pipeline_modify_ModifyAPI",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_623f00ee9c18654bb5892e40"
+  "gitSyncId": "6225932e52df83079ac94bc5_628744eb9c18654bb5892fc1"
 }

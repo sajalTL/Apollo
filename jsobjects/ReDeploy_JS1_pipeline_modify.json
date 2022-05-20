@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "ReDeploy_JS1",
+    "pageId": "pipeline_modify",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\tawait Modify_pipeline1.run()\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Insert_class1.run({org: appsmith.store.class_id[i]})\n\t\t}\n\t\tawait ListAPI.run()\n\t\tif (ListAPI.data.filter(item=>item.name===\"apollo_\"+Table1.selectedRow.pipeline_id)[0].status===\"running\")\n\t\t{\n\t\t\tStopAPI.run(()=> RemoveAPI.run(()=> ModifyAPI.run))\n\t\t}\n    else\n\t\t\t{\n\t\t\t\tRemoveAPI.run(()=> ModifyAPI.run)\n\t\t\t}\n\t\t\n\tawait Select.run().then(()=>showAlert(\"Pipeline ID \"+appsmith.store.pipeline_id+\" modified successfully\"))\n\t\tcloseModal('Modal1')\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "pipeline_modify_ReDeploy_JS1",
+  "deleted": false,
+  "gitSyncId": "6225932e52df83079ac94bc5_626651109c18654bb5892f5d"
+}

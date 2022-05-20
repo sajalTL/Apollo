@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 570,
+          "bottomRow": 580,
           "containerStyle": "none",
           "snapRows": 60,
           "parentRowSpace": 1,
@@ -1228,7 +1228,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1Copy",
-                              "onClick": "",
+                              "onClick": "{{ReDeploy_JS2.myFun2()}}",
                               "buttonColor": "#93BC4D",
                               "dynamicPropertyPathList": [],
                               "displayName": "FormButton",
@@ -1305,7 +1305,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{Table1.selectedRow.camera}}",
+                              "defaultOptionValue": "{ \"label\": \"{{Table1.selectedRow.camera}}\", \"value\": \"{{Table1.selectedRow.camera_id}}\" }",
                               "animateLoading": true,
                               "parentColumnSpace": 9.48974609375,
                               "dynamicTriggerPathList": [],
@@ -1345,7 +1345,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{Table1.selectedRow.model_name}}",
+                              "defaultOptionValue": "{ \"label\": \"{{Table1.selectedRow.model_name}}\", \"value\": \"{{Table1.selectedRow.model_id}}\" }",
                               "animateLoading": true,
                               "parentColumnSpace": 9.48974609375,
                               "dynamicTriggerPathList": [
@@ -1950,7 +1950,7 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "CheckboxGroup1Copy",
+                              "widgetName": "Classes",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "options"
@@ -1980,7 +1980,7 @@
                                   "key": "defaultSelectedValues"
                                 }
                               ],
-                              "onSelectionChange": "{{storeValue('A',CheckboxGroup1.selectedValues)}}",
+                              "onSelectionChange": "{{storeValue('class_id',Classes.selectedValues)}}",
                               "options": "{{class_names.data.map(c => ({label: c.class_name, value: c.class_id}))}}",
                               "isDisabled": false,
                               "key": "xxipg7ylsx",
@@ -2140,7 +2140,7 @@
                                 }
                               ],
                               "text": "Start",
-                              "isDisabled": "{{Table1.selectedRow.status===\"Running\"}}",
+                              "isDisabled": "{{Table1.selectedRow.status===\"Active\"}}",
                               "key": "m7gdhva5jk",
                               "rightColumn": 44,
                               "isDefaultClickDisabled": true,
@@ -2157,6 +2157,7 @@
                             {
                               "widgetName": "Button3Copy",
                               "buttonColor": "#38AFF4",
+                              "dynamicPropertyPathList": [],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
                               "topRow": 44,
@@ -2520,12 +2521,15 @@
               "dynamicPropertyPathList": [
                 {
                   "key": "primaryColumns.customColumn1.onClick"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.isDisabled"
                 }
               ],
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
-              "topRow": 20,
-              "bottomRow": 55,
+              "topRow": 21,
+              "bottomRow": 56,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -2607,9 +2611,15 @@
                 },
                 {
                   "key": "defaultSelectedRow"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.isDisabled"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.isDisabled"
                 }
               ],
-              "leftColumn": 5,
+              "leftColumn": 4,
               "primaryColumns": {
                 "created_by": {
                   "index": 3,
@@ -2910,7 +2920,7 @@
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isDisabled": false,
+                  "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status===\"Removed\"))}}",
                   "isCellVisible": true,
                   "isDerived": true,
                   "label": "Modify",
@@ -2921,7 +2931,7 @@
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
-                  "onClick": "{{Table1.selectedRow.status===\"Stopped\"?showModal('Modal2'):showModal('Modal1')}}"
+                  "onClick": "{{Table1.selectedRow.status===\"Active\"?showModal('Modal1'):showModal('Modal2')}}"
                 },
                 "camera_id": {
                   "index": 17,
@@ -2953,7 +2963,7 @@
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isDisabled": false,
+                  "isDisabled": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status===\"Removed\"))}}",
                   "isCellVisible": true,
                   "isDerived": true,
                   "label": "Modify",
@@ -2967,7 +2977,7 @@
                   "onClick": "{{showModal('Modal1')}}"
                 }
               },
-              "rightColumn": 63,
+              "rightColumn": 62,
               "textSize": "PARAGRAPH",
               "widgetId": "ss04bfvfxw",
               "isVisibleFilters": true,
@@ -3260,7 +3270,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1",
-                              "onClick": "{{JSObject1.myFun2()}};\n{{closeModal(Modal1)}};",
+                              "onClick": "{{ReDeploy_JS1.myFun2()}}",
                               "buttonColor": "#93BC4D",
                               "dynamicPropertyPathList": [
                                 {
@@ -4191,7 +4201,13 @@
                             },
                             {
                               "widgetName": "Button3",
+                              "onClick": "{{Remove_JS.myFun1()}}",
                               "buttonColor": "#38AFF4",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca02633.svg",
                               "topRow": 44,
@@ -4201,11 +4217,19 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 10.0065673828125,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 44,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "isDisabled"
+                                }
+                              ],
                               "text": "Remove",
-                              "isDisabled": false,
+                              "isDisabled": "{{Table1.selectedRow.status===\"Removed\"}}",
                               "key": "m7gdhva5jk",
                               "rightColumn": 54,
                               "isDefaultClickDisabled": true,
@@ -4494,9 +4518,9 @@
           "Checkbox2Copy",
           "Checkbox2Copy1",
           "CheckboxGroup1",
-          "CheckboxGroup1Copy",
           "CheckboxGroup1Copy1",
           "CheckboxGroup2",
+          "Classes",
           "Container2",
           "Form1",
           "Form1Copy",
