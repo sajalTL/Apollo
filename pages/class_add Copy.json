@@ -491,7 +491,7 @@
                           "key": "onSelectionChange"
                         }
                       ],
-                      "leftColumn": 33,
+                      "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
