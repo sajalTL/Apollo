@@ -136,7 +136,7 @@
                     },
                     {
                       "widgetName": "Button1Copy8Copy",
-                      "onClick": "{{navigateTo('class_add', {})}}",
+                      "onClick": "{{navigateTo('class_add Copy', {})}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
