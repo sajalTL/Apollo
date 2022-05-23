@@ -514,10 +514,15 @@
                       "parentId": "t73gczga4g",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "isInline": true
+                      "isInline": false
                     },
                     {
                       "widgetName": "Text9",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 6,
@@ -529,7 +534,11 @@
                       "parentColumnSpace": 9.13330078125,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 35,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Select Class",
@@ -537,7 +546,7 @@
                       "rightColumn": 51,
                       "textAlign": "LEFT",
                       "widgetId": "0yt1mntqgt",
-                      "isVisible": true,
+                      "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
                       "fontStyle": "",
                       "textColor": "#231F20",
                       "shouldScroll": false,
