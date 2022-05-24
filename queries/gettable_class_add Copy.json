@@ -19,7 +19,7 @@
       "encodeParamsToggle": true,
       "body": "select class_id,class_name from class_master where model_id = {{Select1.selectedOptionValue}};"
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 580,
+          "bottomRow": 630,
           "containerStyle": "none",
           "snapRows": 53,
           "parentRowSpace": 1,
@@ -120,14 +120,14 @@
               "displayName": "Form",
               "iconSVG": "/static/media/icon.ea3e08d1.svg",
               "topRow": 9,
-              "bottomRow": 49,
+              "bottomRow": 52,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 11.40625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 8,
+              "leftColumn": 7,
               "dynamicBindingPathList": [],
               "children": [
                 {
@@ -138,7 +138,7 @@
                   "widgetId": "t73gczga4g",
                   "containerStyle": "none",
                   "topRow": 0,
-                  "bottomRow": 390,
+                  "bottomRow": 410,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -195,8 +195,8 @@
                       "dynamicPropertyPathList": [],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 35,
+                      "bottomRow": 39,
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
@@ -228,8 +228,8 @@
                       "buttonColor": "#93BC4D",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 35,
+                      "bottomRow": 39,
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
@@ -287,7 +287,7 @@
                     },
                     {
                       "widgetName": "Select1",
-                      "isFilterable": true,
+                      "isFilterable": false,
                       "dynamicPropertyPathList": [
                         {
                           "key": "onOptionChange"
@@ -322,7 +322,7 @@
                       "key": "j0iuj14vy2",
                       "labelTextSize": "PARAGRAPH",
                       "isRequired": true,
-                      "rightColumn": 30,
+                      "rightColumn": 24,
                       "widgetId": "hpmwvzpdwf",
                       "isVisible": true,
                       "version": 1,
@@ -333,8 +333,10 @@
                     },
                     {
                       "widgetName": "Input1",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
+                      "onSubmit": "",
                       "topRow": 18,
                       "bottomRow": 22,
                       "parentRowSpace": 10,
@@ -343,7 +345,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 8.5986328125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 3,
                       "dynamicBindingPathList": [
@@ -360,7 +366,8 @@
                       "key": "gjbaoyp16w",
                       "validation": "{{!model_class_version_select.data.map(function dictToarr(index){return index.combination}).includes(Select1.selectedOptionLabel+Text8.text+Input1.text)}}",
                       "isRequired": true,
-                      "rightColumn": 30,
+                      "onTextChanged": "",
+                      "rightColumn": 24,
                       "widgetId": "zrzvccz50l",
                       "errorMessage": "Value can't be duplicate",
                       "isVisible": true,
@@ -370,15 +377,15 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "iconAlign": "left",
-                      "defaultText": "{{CheckboxGroup1.selectedValues[0]}}"
+                      "defaultText": "{{CheckboxGroup2.selectedValues[0]}}"
                     },
                     {
                       "widgetName": "Switch1",
                       "dynamicPropertyPathList": [],
                       "displayName": "Switch",
                       "iconSVG": "/static/media/icon.a3115bc1.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 31,
+                      "bottomRow": 35,
                       "parentRowSpace": 10,
                       "type": "SWITCH_WIDGET",
                       "alignWidget": "LEFT",
@@ -409,8 +416,8 @@
                       "widgetName": "Text6",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 23,
-                      "bottomRow": 27,
+                      "topRow": 27,
+                      "bottomRow": 31,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -440,8 +447,8 @@
                       "widgetName": "Text7",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 31,
+                      "bottomRow": 35,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -468,55 +475,6 @@
                       "fontSize": "PARAGRAPH"
                     },
                     {
-                      "widgetName": "CheckboxGroup1",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "options"
-                        },
-                        {
-                          "key": "isVisible"
-                        }
-                      ],
-                      "displayName": "Checkbox Group",
-                      "iconSVG": "/static/media/icon.ecb38479.svg",
-                      "topRow": 10,
-                      "bottomRow": 27,
-                      "parentRowSpace": 10,
-                      "type": "CHECKBOX_GROUP_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 9.13330078125,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onSelectionChange"
-                        }
-                      ],
-                      "leftColumn": 35,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "options"
-                        },
-                        {
-                          "key": "isVisible"
-                        }
-                      ],
-                      "onSelectionChange": "{{storeValue('new_class',CheckboxGroup1.selectedValues)}}",
-                      "options": "{{ Classnames_API.data.map((row) =>\t{return { label: row,\t\t\t\t\t\t\t\t\tvalue: row } \n    })\n}}",
-                      "isDisabled": false,
-                      "key": "hxov1oazmm",
-                      "optionAlignment": "flex-start",
-                      "isRequired": false,
-                      "rightColumn": 51,
-                      "defaultSelectedValues": "",
-                      "widgetId": "7dz7zpkrq8",
-                      "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
-                      "version": 2,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "isInline": false
-                    },
-                    {
                       "widgetName": "Text9",
                       "dynamicPropertyPathList": [
                         {
@@ -525,15 +483,15 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 5,
+                      "bottomRow": 9,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 9.13330078125,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 35,
+                      "leftColumn": 25,
                       "dynamicBindingPathList": [
                         {
                           "key": "isVisible"
@@ -543,7 +501,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Select Class",
                       "key": "m3uchdliv6",
-                      "rightColumn": 51,
+                      "rightColumn": 41,
                       "textAlign": "LEFT",
                       "widgetId": "0yt1mntqgt",
                       "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
@@ -555,6 +513,148 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "Table1",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "class_id",
+                        "class_name"
+                      ],
+                      "isVisibleDownload": false,
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 5,
+                      "bottomRow": 25,
+                      "isSortable": false,
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.13330078125,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.class_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.class_name.computedValue"
+                        }
+                      ],
+                      "leftColumn": 44,
+                      "primaryColumns": {
+                        "class_id": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "class_id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "class_id",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.class_id))}}"
+                        },
+                        "class_name": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "class_name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Available Classes",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.class_name))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "j6sfm53pu1",
+                      "derivedColumns": {},
+                      "rightColumn": 63,
+                      "textSize": "PARAGRAPH",
+                      "widgetId": "qbuivpadze",
+                      "isVisibleFilters": false,
+                      "tableData": "{{gettable.data}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "enableClientSideSearch": true,
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "t73gczga4g",
+                      "serverSidePaginationEnabled": false,
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": false,
+                      "isVisiblePagination": false,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "class_id": 76
+                      }
+                    },
+                    {
+                      "widgetName": "CheckboxGroup2",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "displayName": "Checkbox Group",
+                      "iconSVG": "/static/media/icon.ecb38479.svg",
+                      "topRow": 9,
+                      "bottomRow": 22,
+                      "parentRowSpace": 10,
+                      "type": "CHECKBOX_GROUP_WIDGET",
+                      "hideCard": false,
+                      "isSelectAll": true,
+                      "animateLoading": true,
+                      "parentColumnSpace": 9.13330078125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 25,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "options": "{{CheckboxGroup1.options.filter(function(obj) {\n    return !gettable.data.some(function(obj2) {\n        return obj.value == obj2.class_name;\n    });\n})}}",
+                      "isDisabled": false,
+                      "key": "dl41bjcdsy",
+                      "isRequired": false,
+                      "rightColumn": 41,
+                      "defaultSelectedValues": "",
+                      "widgetId": "uf43lhh2a4",
+                      "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
+                      "version": 2,
+                      "parentId": "t73gczga4g",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "isInline": true
                     }
                   ],
                   "key": "lwhl8hfo69"
@@ -563,7 +663,7 @@
               "borderWidth": "",
               "key": "39ibhsw5kq",
               "backgroundColor": "white",
-              "rightColumn": 61,
+              "rightColumn": 60,
               "widgetId": "17xidr8bl5",
               "isVisible": true,
               "parentId": "0",
@@ -610,15 +710,15 @@
               "widgetName": "Text5",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 51,
-              "bottomRow": 55,
+              "topRow": 56,
+              "bottomRow": 60,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 11.40625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 7,
+              "leftColumn": 8,
               "dynamicBindingPathList": [
                 {
                   "key": "text"
@@ -628,7 +728,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{appsmith.user.username}}",
               "key": "57fh39io4p",
-              "rightColumn": 23,
+              "rightColumn": 24,
               "textAlign": "LEFT",
               "widgetId": "bhlfmxjiv3",
               "isVisible": false,
@@ -645,8 +745,8 @@
               "widgetName": "Text8",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 51,
-              "bottomRow": 56,
+              "topRow": 56,
+              "bottomRow": 61,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -663,7 +763,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{version_model.data[0].version}}",
               "key": "bhqn4rbqy2",
-              "rightColumn": 47,
+              "rightColumn": 35,
               "textAlign": "LEFT",
               "widgetId": "5b0lu29cvm",
               "isVisible": false,
@@ -675,6 +775,49 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "fontSize": "PARAGRAPH"
+            },
+            {
+              "widgetName": "CheckboxGroup1",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "displayName": "Checkbox Group",
+              "iconSVG": "/static/media/icon.ecb38479.svg",
+              "topRow": 56,
+              "bottomRow": 61,
+              "parentRowSpace": 10,
+              "type": "CHECKBOX_GROUP_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 9.13330078125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSelectionChange"
+                }
+              ],
+              "leftColumn": 38,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "onSelectionChange": "{{storeValue('new_class',CheckboxGroup1.selectedValues)}}",
+              "options": "{{ Classnames_API.data.map((row) =>\t{return { label: row,\t\t\t\t\t\t\t\t\tvalue: row } \n    })\n}}",
+              "isDisabled": false,
+              "key": "hxov1oazmm",
+              "optionAlignment": "flex-start",
+              "isRequired": false,
+              "rightColumn": 56,
+              "defaultSelectedValues": "",
+              "widgetId": "7dz7zpkrq8",
+              "isVisible": false,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "isInline": false
             }
           ]
         },
@@ -686,6 +829,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "class_add Copy_gettable",
+              "name": "gettable",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -727,6 +882,7 @@
           "Canvas2",
           "Canvas3",
           "CheckboxGroup1",
+          "CheckboxGroup2",
           "Container2",
           "Form1",
           "FormButton1",
@@ -736,6 +892,7 @@
           "MainContainer",
           "Select1",
           "Switch1",
+          "Table1",
           "Text2",
           "Text4",
           "Text5",
