@@ -686,7 +686,7 @@
               "rightColumn": 37,
               "textAlign": "LEFT",
               "widgetId": "c2jcevz4hk",
-              "isVisible": true,
+              "isVisible": false,
               "fontStyle": "BOLD",
               "textColor": "#231F20",
               "shouldScroll": false,
