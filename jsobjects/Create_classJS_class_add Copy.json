@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "Create_classJS",
+    "pageId": "class_add Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n    }\n\t\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "class_add Copy_Create_classJS",
+  "deleted": false,
+  "gitSyncId": "6225932e52df83079ac94bc5_628dddb99c18654bb5892fdc"
+}

@@ -120,7 +120,7 @@
               "displayName": "Form",
               "iconSVG": "/static/media/icon.ea3e08d1.svg",
               "topRow": 9,
-              "bottomRow": 52,
+              "bottomRow": 54,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -192,7 +192,11 @@
                       "widgetName": "FormButton1",
                       "onClick": "{{Createdata.run(() => showAlert('Data Submitted successfully','success'), () => showAlert('Failed to submit data','error'))}}",
                       "buttonColor": "#93BC4D",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 35,
@@ -255,37 +259,6 @@
                       "buttonVariant": "SECONDARY"
                     },
                     {
-                      "widgetName": "Text4",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 14,
-                      "bottomRow": 18,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 7.35107421875,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Class Name",
-                      "key": "isogfo7o7t",
-                      "rightColumn": 19,
-                      "textAlign": "LEFT",
-                      "widgetId": "4v48xova1u",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "shouldScroll": false,
-                      "version": 1,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
                       "widgetName": "Select1",
                       "isFilterable": false,
                       "dynamicPropertyPathList": [
@@ -332,149 +305,6 @@
                       "onOptionChange": "{{Classnames_API.run(() => gettable.run(() => version_model.run(), () => {}))}}"
                     },
                     {
-                      "widgetName": "Input1",
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595.svg",
-                      "onSubmit": "",
-                      "topRow": 18,
-                      "bottomRow": 22,
-                      "parentRowSpace": 10,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 8.5986328125,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onTextChanged"
-                        }
-                      ],
-                      "resetOnSubmit": true,
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "validation"
-                        },
-                        {
-                          "key": "defaultText"
-                        }
-                      ],
-                      "labelStyle": "",
-                      "inputType": "TEXT",
-                      "isDisabled": false,
-                      "key": "gjbaoyp16w",
-                      "validation": "{{!model_class_version_select.data.map(function dictToarr(index){return index.combination}).includes(Select1.selectedOptionLabel+Text8.text+Input1.text)}}",
-                      "isRequired": true,
-                      "onTextChanged": "",
-                      "rightColumn": 24,
-                      "widgetId": "zrzvccz50l",
-                      "errorMessage": "Value can't be duplicate",
-                      "isVisible": true,
-                      "label": "",
-                      "version": 2,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "iconAlign": "left",
-                      "defaultText": "{{CheckboxGroup2.selectedValues[0]}}"
-                    },
-                    {
-                      "widgetName": "Switch1",
-                      "dynamicPropertyPathList": [],
-                      "displayName": "Switch",
-                      "iconSVG": "/static/media/icon.a3115bc1.svg",
-                      "topRow": 31,
-                      "bottomRow": 35,
-                      "parentRowSpace": 10,
-                      "type": "SWITCH_WIDGET",
-                      "alignWidget": "LEFT",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 8.5986328125,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onChange"
-                        }
-                      ],
-                      "leftColumn": 9,
-                      "dynamicBindingPathList": [],
-                      "isDisabled": false,
-                      "key": "xrglogpcr8",
-                      "rightColumn": 17,
-                      "onChange": "",
-                      "widgetId": "aewpnzj4oe",
-                      "isVisible": true,
-                      "label": "Active",
-                      "defaultSwitchState": true,
-                      "version": 1,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false
-                    },
-                    {
-                      "widgetName": "Text6",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 9.13330078125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Status",
-                      "key": "8tr5z7pqyd",
-                      "rightColumn": 19,
-                      "textAlign": "LEFT",
-                      "widgetId": "akdqxoqxg7",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "shouldScroll": false,
-                      "version": 1,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
-                      "widgetName": "Text7",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 31,
-                      "bottomRow": 35,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 9.13330078125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 3,
-                      "dynamicBindingPathList": [],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "Inactive",
-                      "key": "8tr5z7pqyd",
-                      "rightColumn": 9,
-                      "textAlign": "LEFT",
-                      "widgetId": "eoq6wluz4j",
-                      "isVisible": true,
-                      "fontStyle": "",
-                      "textColor": "#231F20",
-                      "shouldScroll": false,
-                      "version": 1,
-                      "parentId": "t73gczga4g",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "fontSize": "PARAGRAPH"
-                    },
-                    {
                       "widgetName": "Text9",
                       "dynamicPropertyPathList": [
                         {
@@ -483,15 +313,15 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 5,
-                      "bottomRow": 9,
+                      "topRow": 13,
+                      "bottomRow": 17,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 9.13330078125,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 25,
+                      "leftColumn": 3,
                       "dynamicBindingPathList": [
                         {
                           "key": "isVisible"
@@ -501,7 +331,7 @@
                       "truncateButtonColor": "#FFC13D",
                       "text": "Select Class",
                       "key": "m3uchdliv6",
-                      "rightColumn": 41,
+                      "rightColumn": 19,
                       "textAlign": "LEFT",
                       "widgetId": "0yt1mntqgt",
                       "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
@@ -530,7 +360,7 @@
                       "displayName": "Table",
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
                       "topRow": 5,
-                      "bottomRow": 25,
+                      "bottomRow": 34,
                       "isSortable": false,
                       "parentRowSpace": 10,
                       "type": "TABLE_WIDGET",
@@ -553,7 +383,7 @@
                           "key": "isVisible"
                         }
                       ],
-                      "leftColumn": 44,
+                      "leftColumn": 30,
                       "primaryColumns": {
                         "class_id": {
                           "index": 0,
@@ -565,11 +395,11 @@
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "class_id",
+                          "label": "Class Id",
                           "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.class_id))}}"
                         },
                         "class_name": {
@@ -586,14 +416,14 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Available Classes",
+                          "label": "Class Name",
                           "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.class_name))}}"
                         }
                       },
                       "delimiter": ",",
                       "key": "j6sfm53pu1",
                       "derivedColumns": {},
-                      "rightColumn": 63,
+                      "rightColumn": 53,
                       "textSize": "PARAGRAPH",
                       "widgetId": "qbuivpadze",
                       "isVisibleFilters": false,
@@ -631,16 +461,20 @@
                       ],
                       "displayName": "Checkbox Group",
                       "iconSVG": "/static/media/icon.ecb38479.svg",
-                      "topRow": 9,
-                      "bottomRow": 22,
+                      "topRow": 17,
+                      "bottomRow": 35,
                       "parentRowSpace": 10,
                       "type": "CHECKBOX_GROUP_WIDGET",
                       "hideCard": false,
                       "isSelectAll": true,
                       "animateLoading": true,
                       "parentColumnSpace": 9.13330078125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 25,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSelectionChange"
+                        }
+                      ],
+                      "leftColumn": 3,
                       "dynamicBindingPathList": [
                         {
                           "key": "options"
@@ -649,11 +483,12 @@
                           "key": "isVisible"
                         }
                       ],
+                      "onSelectionChange": "{{storeValue('class_id',CheckboxGroup2.selectedValues)}}",
                       "options": "{{CheckboxGroup1.options.filter(function(obj) {\n    return !gettable.data.some(function(obj2) {\n        return obj.value == obj2.class_name;\n    });\n})}}",
                       "isDisabled": false,
                       "key": "dl41bjcdsy",
                       "isRequired": false,
-                      "rightColumn": 41,
+                      "rightColumn": 19,
                       "defaultSelectedValues": "",
                       "widgetId": "uf43lhh2a4",
                       "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
@@ -735,7 +570,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{appsmith.user.username}}",
               "key": "57fh39io4p",
-              "rightColumn": 24,
+              "rightColumn": 12,
               "textAlign": "LEFT",
               "widgetId": "bhlfmxjiv3",
               "isVisible": false,
@@ -760,7 +595,7 @@
               "animateLoading": true,
               "parentColumnSpace": 11.40625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 24,
+              "leftColumn": 15,
               "dynamicBindingPathList": [
                 {
                   "key": "text"
@@ -770,7 +605,7 @@
               "truncateButtonColor": "#FFC13D",
               "text": "{{version_model.data[0].version}}",
               "key": "bhqn4rbqy2",
-              "rightColumn": 35,
+              "rightColumn": 19,
               "textAlign": "LEFT",
               "widgetId": "5b0lu29cvm",
               "isVisible": false,
@@ -792,8 +627,8 @@
               ],
               "displayName": "Checkbox Group",
               "iconSVG": "/static/media/icon.ecb38479.svg",
-              "topRow": 56,
-              "bottomRow": 61,
+              "topRow": 55,
+              "bottomRow": 60,
               "parentRowSpace": 10,
               "type": "CHECKBOX_GROUP_WIDGET",
               "hideCard": false,
@@ -825,6 +660,41 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "isInline": false
+            },
+            {
+              "widgetName": "Text10",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 56,
+              "bottomRow": 60,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 11.40625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 21,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{appsmith.store.class_id}}",
+              "key": "zexqqlb8do",
+              "rightColumn": 37,
+              "textAlign": "LEFT",
+              "widgetId": "c2jcevz4hk",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
             }
           ]
         },
@@ -872,16 +742,6 @@
               ],
               "timeoutInMillisecond": 10000
             }
-          ],
-          [
-            {
-              "id": "class_add Copy_model_class_version_select",
-              "name": "model_class_version_select",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
           ]
         ],
         "widgetNames": [
@@ -895,16 +755,12 @@
           "FormButton1",
           "FormButton2",
           "Image2",
-          "Input1",
           "MainContainer",
           "Select1",
-          "Switch1",
           "Table1",
+          "Text10",
           "Text2",
-          "Text4",
           "Text5",
-          "Text6",
-          "Text7",
           "Text8",
           "Text9"
         ],
