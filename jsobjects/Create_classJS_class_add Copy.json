@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n    }\n\t\n\t}\n}",
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\tvar results =[]\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n\t\t\tresults = [...results,Createdata.responseMeta.isExecutionSuccess]\n    }\n\t\t  results.length> 0 && results.includes(\"false\")=== false ?showAlert('Data created successfully.') : showAlert('Failed to create data.')\n\t\tnavigateTo('class_view', {},'SAME_WINDOW')\n\t}\n}",
     "variables": [
       {
         "name": "myVar1",

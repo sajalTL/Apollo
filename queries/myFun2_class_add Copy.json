@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n    }\n\t\n\t}",
+      "body": "async () => {\n\t\tvar results =[]\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n\t\t\tresults = [...results,Createdata.responseMeta.isExecutionSuccess]\n    }\n\t\t  results.length> 0 && results.includes(\"false\")=== false ?showAlert('Data created successfully.') : showAlert('Failed to create data.')\n\t\tnavigateTo('class_view', {},'SAME_WINDOW')\n\t}",
       "jsArguments": [],
       "isAsync": true
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n    }\n\t\n\t}"
+      "async () => {\n\t\tvar results =[]\n\t\tfor (let i = 0;i<appsmith.store.class_id.length;i++){\n\t\t\tawait Createdata.run({org: appsmith.store.class_id[i]})\n\t\t\tresults = [...results,Createdata.responseMeta.isExecutionSuccess]\n    }\n\t\t  results.length> 0 && results.includes(\"false\")=== false ?showAlert('Data created successfully.') : showAlert('Failed to create data.')\n\t\tnavigateTo('class_view', {},'SAME_WINDOW')\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

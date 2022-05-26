@@ -190,13 +190,9 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{Createdata.run(() => showAlert('Data Submitted successfully','success'), () => showAlert('Failed to submit data','error'))}}",
+                      "onClick": "{{Create_classJS.myFun2()}}",
                       "buttonColor": "#93BC4D",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 35,
@@ -313,8 +309,8 @@
                       ],
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 13,
-                      "bottomRow": 17,
+                      "topRow": 15,
+                      "bottomRow": 19,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -461,8 +457,8 @@
                       ],
                       "displayName": "Checkbox Group",
                       "iconSVG": "/static/media/icon.ecb38479.svg",
-                      "topRow": 17,
-                      "bottomRow": 35,
+                      "topRow": 19,
+                      "bottomRow": 37,
                       "parentRowSpace": 10,
                       "type": "CHECKBOX_GROUP_WIDGET",
                       "hideCard": false,
@@ -488,7 +484,7 @@
                       "isDisabled": false,
                       "key": "dl41bjcdsy",
                       "optionAlignment": "flex-start",
-                      "isRequired": false,
+                      "isRequired": true,
                       "rightColumn": 19,
                       "defaultSelectedValues": "",
                       "widgetId": "uf43lhh2a4",
@@ -517,6 +513,11 @@
               "widgetName": "Button1",
               "onClick": "{{navigateTo('Homepage', {},'SAME_WINDOW')}}",
               "buttonColor": "#F6F7F8",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
               "topRow": 9,
