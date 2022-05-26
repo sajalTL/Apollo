@@ -487,6 +487,7 @@
                       "options": "{{CheckboxGroup1.options.filter(function(obj) {\n    return !gettable.data.some(function(obj2) {\n        return obj.value == obj2.class_name;\n    });\n})}}",
                       "isDisabled": false,
                       "key": "dl41bjcdsy",
+                      "optionAlignment": "flex-start",
                       "isRequired": false,
                       "rightColumn": 19,
                       "defaultSelectedValues": "",
