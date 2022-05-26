@@ -321,11 +321,14 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "isVisible"
+                        },
+                        {
+                          "key": "text"
                         }
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Select Class",
+                      "text": "{{CheckboxGroup2.options.length>0?\"Select class\":\"No class available\"}}",
                       "key": "m3uchdliv6",
                       "rightColumn": 19,
                       "textAlign": "LEFT",
@@ -488,7 +491,7 @@
                       "rightColumn": 19,
                       "defaultSelectedValues": "",
                       "widgetId": "uf43lhh2a4",
-                      "isVisible": "{{Select1.selectedOptionValue !=  Number()}} ",
+                      "isVisible": " {{Select1.selectedOptionValue !=  Number() && Text9.text==\"Select class\" }} ",
                       "version": 2,
                       "parentId": "t73gczga4g",
                       "renderMode": "CANVAS",
