@@ -24,6 +24,7 @@
         }
       ],
       "encodeParamsToggle": true,
+      "queryParameters": [],
       "body": "",
       "bodyFormData": [
         {
