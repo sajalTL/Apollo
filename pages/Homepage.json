@@ -28,7 +28,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8Copy",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -257,7 +257,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy2",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b ",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -413,7 +413,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy1",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -569,7 +569,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -725,7 +725,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy6",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b  ",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -955,7 +955,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy5",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1174,7 +1174,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy4",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1393,7 +1393,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy3",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1622,7 +1622,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy2",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1851,7 +1851,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy1",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b  ",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -2081,7 +2081,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8",
-              "borderColor": "#9D2235",
+              "borderColor": "#811a1b",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -2379,13 +2379,13 @@
                       "animateLoading": true,
                       "parentColumnSpace": 11.40625,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 7,
+                      "leftColumn": 9,
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
                       "text": "Apollo",
                       "key": "keiploqgc2",
-                      "rightColumn": 17,
+                      "rightColumn": 19,
                       "backgroundColor": "#811a1b",
                       "textAlign": "LEFT",
                       "widgetId": "jdf5qf2hse",
