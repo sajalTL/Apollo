@@ -28,7 +28,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8Copy",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -257,7 +257,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy2",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -413,7 +413,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy1",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -569,7 +569,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopyCopy",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -725,7 +725,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy6",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -955,7 +955,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy5",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1174,7 +1174,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy4",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1393,7 +1393,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy3",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1622,7 +1622,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy2",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -1851,7 +1851,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8CopyCopy1",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -2081,7 +2081,7 @@
             {
               "boxShadow": "NONE",
               "widgetName": "Container1Copy8",
-              "borderColor": "#93BC4D",
+              "borderColor": "#9D2235",
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
@@ -2352,7 +2352,7 @@
                       "imageShape": "RECTANGLE",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "defaultImage": "https://apollo-echol.s3.ap-southeast-1.amazonaws.com/logo/increased+logo-01.png",
+                      "defaultImage": "https://vertio.s3.ap-southeast-1.amazonaws.com/logo/Echol_logo.PNG",
                       "key": "54a564kip6",
                       "image": "",
                       "rightColumn": 7,
@@ -2386,7 +2386,7 @@
                       "text": "Apollo",
                       "key": "keiploqgc2",
                       "rightColumn": 17,
-                      "backgroundColor": "#93BC4D",
+                      "backgroundColor": "#9D2235",
                       "textAlign": "LEFT",
                       "widgetId": "jdf5qf2hse",
                       "isVisible": true,
@@ -2405,7 +2405,7 @@
               ],
               "borderWidth": "0",
               "key": "nslpnrnt8d",
-              "backgroundColor": "#92BC4C",
+              "backgroundColor": "#9D2235",
               "rightColumn": 64,
               "widgetId": "02ogcw9ss1",
               "containerStyle": "card",
