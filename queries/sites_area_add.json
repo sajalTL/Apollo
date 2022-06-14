@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Create",
+    "name": "sites",
     "datasource": {
       "pluginId": "mysql-plugin",
       "messages": [],
@@ -17,29 +17,20 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO area_ref SET site_id = {{Select1.selectedOptionValue}}, area_name = '{{Input1.text}}',\n  area_description = '{{Input2.text}}', created_by = '{{Text5.text}}';"
+      "body": "SELECT * FROM site_ref;\n"
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "Input1.text",
-      "Input2.text",
-      "Select1.selectedOptionValue",
-      "Text5.text"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "area_add_Create",
+  "id": "area_add_sites",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_6225e06552df83079ac94be9"
+  "gitSyncId": "6225932e52df83079ac94bc5_62a857169c18654bb5892ff7"
 }
