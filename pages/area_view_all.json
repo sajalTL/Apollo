@@ -153,14 +153,12 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "area_id",
-                "site_id",
                 "area_name",
                 "area_description",
+                "site_name",
                 "status",
                 "created_by",
-                "created_date",
-                "edited_by",
-                "edited_date"
+                "created_date"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -185,12 +183,6 @@
                   "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.edited_date.computedValue"
-                },
-                {
-                  "key": "primaryColumns.edited_by.computedValue"
-                },
-                {
                   "key": "primaryColumns.created_date.computedValue"
                 },
                 {
@@ -209,7 +201,7 @@
                   "key": "primaryColumns.status.computedValue"
                 },
                 {
-                  "key": "primaryColumns.site_id.computedValue"
+                  "key": "primaryColumns.site_name.computedValue"
                 }
               ],
               "leftColumn": 5,
@@ -301,40 +293,6 @@
                   "inputFormat": "YYYY-MM-DD hh:mm:ss",
                   "outputFormat": "YYYY-MM-DD hh:mm:ss"
                 },
-                "edited_by": {
-                  "index": 5,
-                  "width": 150,
-                  "id": "edited_by",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Edited_by",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.edited_by))}}"
-                },
-                "edited_date": {
-                  "index": 6,
-                  "width": 150,
-                  "id": "edited_date",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "number",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Edited_date",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.edited_date))}}"
-                },
                 "status": {
                   "index": 3,
                   "width": 150,
@@ -352,10 +310,10 @@
                   "label": "Status",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}"
                 },
-                "site_id": {
-                  "index": 1,
+                "site_name": {
+                  "index": 3,
                   "width": 150,
-                  "id": "site_id",
+                  "id": "site_name",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -366,8 +324,8 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Site_id",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_id))}}"
+                  "label": "site_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
                 }
               },
               "delimiter": ",",
