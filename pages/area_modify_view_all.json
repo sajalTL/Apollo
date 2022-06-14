@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "site_modify_view_all",
-    "slug": "site-modify-view-all",
+    "name": "area_modify_view_all",
+    "slug": "area-modify-view-all",
     "layouts": [
       {
         "viewMode": false,
@@ -151,9 +151,9 @@
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "site_id",
-                "site_name",
-                "site_description",
+                "area_id",
+                "area_name",
+                "area_description",
                 "status",
                 "created_by",
                 "created_date",
@@ -205,13 +205,13 @@
                   "key": "primaryColumns.status.computedValue"
                 },
                 {
-                  "key": "primaryColumns.site_id.computedValue"
+                  "key": "primaryColumns.area_id.computedValue"
                 },
                 {
-                  "key": "primaryColumns.site_name.computedValue"
+                  "key": "primaryColumns.area_name.computedValue"
                 },
                 {
-                  "key": "primaryColumns.site_description.computedValue"
+                  "key": "primaryColumns.area_description.computedValue"
                 }
               ],
               "leftColumn": 5,
@@ -307,7 +307,7 @@
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
-                  "onClick": "{{showModal('site_modify_one')}}"
+                  "onClick": "{{showModal('area_modify_one')}}"
                 },
                 "status": {
                   "index": 3,
@@ -326,10 +326,10 @@
                   "label": "Status",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}"
                 },
-                "site_id": {
-                  "index": 0,
+                "area_id": {
+                  "index": 5,
                   "width": 150,
-                  "id": "site_id",
+                  "id": "area_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -340,13 +340,13 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "site_id",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_id))}}"
+                  "label": "area_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_id))}}"
                 },
-                "site_name": {
-                  "index": 1,
+                "area_name": {
+                  "index": 6,
                   "width": 150,
-                  "id": "site_name",
+                  "id": "area_name",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -357,13 +357,13 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "site_name",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
+                  "label": "area_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_name))}}"
                 },
-                "site_description": {
-                  "index": 2,
+                "area_description": {
+                  "index": 7,
                   "width": 150,
-                  "id": "site_description",
+                  "id": "area_description",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -374,8 +374,8 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "site_description",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_description))}}"
+                  "label": "area_description",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_description))}}"
                 }
               },
               "delimiter": ",",
@@ -400,7 +400,7 @@
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
-                  "onClick": "{{showModal('site_modify_one')}}"
+                  "onClick": "{{showModal('area_modify_one')}}"
                 }
               },
               "rightColumn": 63,
@@ -457,7 +457,7 @@
               "dynamicBindingPathList": [],
               "shouldTruncate": false,
               "truncateButtonColor": "#FFC13D",
-              "text": " Modify Site                                                 ",
+              "text": " Modify Area                                                 ",
               "key": "bpwt2bomsd",
               "rightColumn": 47,
               "textAlign": "LEFT",
@@ -520,7 +520,7 @@
               "type": "DROP_DOWN_WIDGET",
               "serverSideFiltering": false,
               "hideCard": false,
-              "defaultOptionValue": "site_id",
+              "defaultOptionValue": "area_id",
               "selectionType": "SINGLE_SELECT",
               "animateLoading": true,
               "parentColumnSpace": 13.765625,
@@ -535,7 +535,7 @@
                   "key": "isVisible"
                 }
               ],
-              "options": "[\n  {\n    \"label\": \"ID\",\n    \"value\": \"site_id\"\n  },\n  {\n    \"label\": \"Site Name\",\n    \"value\": \"site_name\"\n  },\n  {\n    \"label\": \"Status\",\n    \"value\": \"status\"\n  },\n\t{\n\t  \"label\": \"Created_by\",\n    \"value\": \"created_by\"\n\t},\n\t{\n\t  \"label\": \"Created_date\",\n    \"value\": \"created_date\"\n\t}\n]",
+              "options": "[\n  {\n    \"label\": \"ID\",\n    \"value\": \"area_id\"\n  },\n  {\n    \"label\": \"Area Name\",\n    \"value\": \"area_name\"\n  },\n  {\n    \"label\": \"Status\",\n    \"value\": \"status\"\n  },\n\t{\n\t  \"label\": \"Created_by\",\n    \"value\": \"created_by\"\n\t},\n\t{\n\t  \"label\": \"Created_date\",\n    \"value\": \"created_date\"\n\t}\n]",
               "placeholderText": "",
               "isDisabled": false,
               "key": "9vayb4m07d",
@@ -630,7 +630,7 @@
               "buttonVariant": "TERTIARY"
             },
             {
-              "widgetName": "site_modify_one",
+              "widgetName": "area_modify_one",
               "isCanvas": true,
               "displayName": "Modal",
               "iconSVG": "/static/media/icon.4975978e.svg",
@@ -726,7 +726,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": " Modify Site - {{Table1.selectedRow.site_name}}",
+                              "text": " Modify Area - {{Table1.selectedRow.area_name}}",
                               "key": "t3c1aktkw4",
                               "rightColumn": 51,
                               "textAlign": "LEFT",
@@ -744,7 +744,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1",
-                              "onClick": "{{ModifyQuery.run(() => SelectQuery.run(() => closeModal('site_modify_one')), () => {})}}",
+                              "onClick": "{{ModifyQuery.run(() => SelectQuery.run(() => closeModal('area_modify_one')), () => {})}}",
                               "buttonColor": "#93BC4D",
                               "dynamicPropertyPathList": [
                                 {
@@ -782,7 +782,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton2",
-                              "onClick": "{{closeModal('site_modify_one')}}",
+                              "onClick": "{{closeModal('area_modify_one')}}",
                               "buttonColor": "#93BC4D",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -815,7 +815,7 @@
                             {
                               "widgetName": "Icon1",
                               "rightColumn": 64,
-                              "onClick": "{{closeModal('site_modify_one')}}",
+                              "onClick": "{{closeModal('area_modify_one')}}",
                               "color": "#040627",
                               "iconName": "cross",
                               "displayName": "Icon",
@@ -850,7 +850,7 @@
                               "dynamicBindingPathList": [],
                               "shouldTruncate": false,
                               "truncateButtonColor": "#FFC13D",
-                              "text": "Site Name",
+                              "text": "Area Name",
                               "key": "t3c1aktkw4",
                               "rightColumn": 16,
                               "textAlign": "LEFT",
@@ -905,7 +905,7 @@
                               "isLoading": false,
                               "regex": "^[A-Za-z0-9\\s]{3,20}$",
                               "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRow.site_name}}"
+                              "defaultText": "{{Table1.selectedRow.area_name}}"
                             },
                             {
                               "widgetName": "Text6",
@@ -977,7 +977,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRow.site_description}}"
+                              "defaultText": "{{Table1.selectedRow.area_description}}"
                             },
                             {
                               "widgetName": "Text7",
@@ -1115,7 +1115,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "site_modify_view_all_SelectQuery",
+              "id": "area_modify_view_all_SelectQuery",
               "name": "SelectQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -1128,7 +1128,7 @@
           ],
           [
             {
-              "id": "site_modify_view_all_SiteName",
+              "id": "area_modify_view_all_SiteName",
               "name": "SiteName",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -1163,10 +1163,10 @@
           "Text5",
           "Text6",
           "Text7",
-          "site_modify_one"
+          "area_modify_one"
         ],
         "validOnPageLoadActions": true,
-        "id": "site_modify_view_all",
+        "id": "area_modify_view_all",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -1174,9 +1174,9 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": true
+    "isHidden": false
   },
   "deleted": false,
   "policies": [],
-  "gitSyncId": "6225932e52df83079ac94bc5_6225d26352df83079ac94be0"
+  "gitSyncId": "6225932e52df83079ac94bc5_62a853639c18654bb5892fed"
 }
