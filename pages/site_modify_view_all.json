@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "area_modify_view_all",
-    "slug": "area-modify-view-all",
+    "name": "site_modify_view_all",
+    "slug": "site-modify-view-all",
     "layouts": [
       {
         "viewMode": false,
@@ -151,9 +151,9 @@
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "area_id",
-                "area_name",
-                "area_description",
+                "site_id",
+                "site_name",
+                "site_description",
                 "status",
                 "created_by",
                 "created_date",
@@ -184,15 +184,6 @@
                   "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.area_id.computedValue"
-                },
-                {
-                  "key": "primaryColumns.area_name.computedValue"
-                },
-                {
-                  "key": "primaryColumns.area_description.computedValue"
-                },
-                {
                   "key": "primaryColumns.created_by.computedValue"
                 },
                 {
@@ -212,61 +203,19 @@
                 },
                 {
                   "key": "primaryColumns.status.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_description.computedValue"
                 }
               ],
               "leftColumn": 5,
               "primaryColumns": {
-                "area_id": {
-                  "index": 0,
-                  "width": 150,
-                  "id": "area_id",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "ID",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_id))}}"
-                },
-                "area_name": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "area_name",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Area Name",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_name))}}"
-                },
-                "area_description": {
-                  "index": 2,
-                  "width": 150,
-                  "id": "area_description",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Area Description",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_description))}}"
-                },
                 "created_by": {
                   "index": 3,
                   "width": 150,
@@ -376,6 +325,57 @@
                   "isDerived": false,
                   "label": "Status",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}"
+                },
+                "site_id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "site_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "site_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_id))}}"
+                },
+                "site_name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "site_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "site_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
+                },
+                "site_description": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "site_description",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "site_description",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_description))}}"
                 }
               },
               "delimiter": ",",
@@ -535,7 +535,7 @@
                   "key": "isVisible"
                 }
               ],
-              "options": "[\n  {\n    \"label\": \"ID\",\n    \"value\": \"area_id\"\n  },\n  {\n    \"label\": \"Area Name\",\n    \"value\": \"area_name\"\n  },\n  {\n    \"label\": \"Status\",\n    \"value\": \"status\"\n  },\n\t{\n\t  \"label\": \"Created_by\",\n    \"value\": \"created_by\"\n\t},\n\t{\n\t  \"label\": \"Created_date\",\n    \"value\": \"created_date\"\n\t}\n]",
+              "options": "[\n  {\n    \"label\": \"ID\",\n    \"value\": \"site_id\"\n  },\n  {\n    \"label\": \"Site Name\",\n    \"value\": \"site_name\"\n  },\n  {\n    \"label\": \"Status\",\n    \"value\": \"status\"\n  },\n\t{\n\t  \"label\": \"Created_by\",\n    \"value\": \"created_by\"\n\t},\n\t{\n\t  \"label\": \"Created_date\",\n    \"value\": \"created_date\"\n\t}\n]",
               "placeholderText": "",
               "isDisabled": false,
               "key": "9vayb4m07d",
@@ -892,7 +892,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "t85pg7lfdi",
-                              "validation": "{{!AreaName.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
+                              "validation": "{{!SiteName.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
                               "labelTextSize": "PARAGRAPH",
                               "isRequired": true,
                               "rightColumn": 35,
@@ -1115,7 +1115,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "area_modify_view_all_SelectQuery",
+              "id": "site_modify_view_all_SelectQuery",
               "name": "SelectQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -1128,8 +1128,8 @@
           ],
           [
             {
-              "id": "area_modify_view_all_AreaName",
-              "name": "AreaName",
+              "id": "site_modify_view_all_SiteName",
+              "name": "SiteName",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -1166,7 +1166,7 @@
           "area_modify_one"
         ],
         "validOnPageLoadActions": true,
-        "id": "area_modify_view_all",
+        "id": "site_modify_view_all",
         "deleted": false,
         "policies": [],
         "userPermissions": []

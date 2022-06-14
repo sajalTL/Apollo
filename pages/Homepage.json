@@ -100,7 +100,7 @@
                     },
                     {
                       "widgetName": "Button3Copy8CopyCopyCopy",
-                      "onClick": "{{navigateTo('area_modify_view_all', {})}}",
+                      "onClick": "{{navigateTo('site_modify_view_all', {})}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -136,7 +136,7 @@
                     },
                     {
                       "widgetName": "Button1Copy8CopyCopyCopy",
-                      "onClick": "{{navigateTo('area_add', {})}}",
+                      "onClick": "{{navigateTo('site_add', {})}}",
                       "buttonColor": "#FFFFFF",
                       "dynamicPropertyPathList": [],
                       "displayName": "Button",
@@ -174,7 +174,7 @@
                     },
                     {
                       "widgetName": "Button2Copy8CopyCopy1Copy",
-                      "onClick": "{{navigateTo('area_view_all', {})}}",
+                      "onClick": "{{navigateTo('site_view_all', {})}}",
                       "buttonColor": "#FFFFFF",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",

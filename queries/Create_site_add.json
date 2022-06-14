@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "AreaName",
+    "name": "Create",
     "datasource": {
       "pluginId": "mysql-plugin",
       "messages": [],
@@ -12,25 +12,33 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "area_modify_view_all",
+    "pageId": "site_add",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select area_name from area_ref;"
+      "body": "INSERT INTO site_ref SET site_name = '{{Input1.text}}',\n  site_description = '{{Input2.text}}', created_by = '{{Text5.text}}';"
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Input1.text",
+      "Input2.text",
+      "Text5.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "area_modify_view_all_AreaName",
+  "id": "site_add_Create",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_622796de52df83079ac94bed"
+  "gitSyncId": "6225932e52df83079ac94bc5_62a82cdf9c18654bb5892fe1"
 }

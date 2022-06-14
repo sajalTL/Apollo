@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "area_add",
-    "slug": "area-add",
+    "name": "site_add",
+    "slug": "site-add",
     "layouts": [
       {
         "viewMode": false,
@@ -170,7 +170,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "New Area",
+                      "text": "New Site",
                       "key": "isogfo7o7t",
                       "rightColumn": 38,
                       "textAlign": "LEFT",
@@ -188,7 +188,7 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{Create.run(() => navigateTo('area_view_all', {}), () => showAlert('Failed to create Area','error'))}}",
+                      "onClick": "{{Create.run(() => navigateTo('site_view_all', {}), () => showAlert('Failed to create Area','error'))}}",
                       "buttonColor": "#93BC4D",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -267,7 +267,7 @@
                       "dynamicBindingPathList": [],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Area",
+                      "text": "Site",
                       "key": "isogfo7o7t",
                       "rightColumn": 19,
                       "textAlign": "LEFT",
@@ -336,10 +336,10 @@
                       ],
                       "labelStyle": "",
                       "inputType": "TEXT",
-                      "placeholderText": "Area Name",
+                      "placeholderText": "Site Name",
                       "isDisabled": false,
                       "key": "6ukc8742a8",
-                      "validation": "{{!area.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
+                      "validation": "{{!site.data.map(function dictToarr(index){return index.site_name}).includes(Input1.text)}}",
                       "isRequired": true,
                       "rightColumn": 55,
                       "widgetId": "4gdoon5jj5",
@@ -477,8 +477,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "area_add_area",
-              "name": "area",
+              "id": "site_add_site",
+              "name": "site",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -504,7 +504,7 @@
           "Text5"
         ],
         "validOnPageLoadActions": true,
-        "id": "area_add",
+        "id": "site_add",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -512,9 +512,9 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": true
+    "isHidden": false
   },
   "deleted": false,
   "policies": [],
-  "gitSyncId": "6225932e52df83079ac94bc5_6225d2c352df83079ac94be7"
+  "gitSyncId": "6225932e52df83079ac94bc5_62a82cdf9c18654bb5892fdf"
 }
