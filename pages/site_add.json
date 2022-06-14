@@ -372,7 +372,7 @@
                       "dynamicBindingPathList": [],
                       "labelStyle": "",
                       "inputType": "TEXT",
-                      "maxChars": "100",
+                      "maxChars": "300",
                       "isDisabled": false,
                       "key": "6ukc8742a8",
                       "isRequired": false,
