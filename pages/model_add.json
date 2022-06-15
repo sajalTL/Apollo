@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 619,
+          "rightColumn": 617,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -335,7 +335,7 @@
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1Copy",
                               "onClick": "{{storeValue('tab','Tab 2')}}",
-                              "buttonColor": "#92BC4C",
+                              "buttonColor": "#811a1b",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "onClick"
@@ -373,7 +373,7 @@
                               "resetFormOnClick": true,
                               "widgetName": "FormButton2Copy",
                               "onClick": "{{resetWidget(\"Tabs1\",true)}}",
-                              "buttonColor": "#92BC4C",
+                              "buttonColor": "#811a1b",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
                               "topRow": 68,

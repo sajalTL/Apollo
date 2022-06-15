@@ -709,7 +709,7 @@
               "boxShadow": "NONE",
               "widgetName": "IconButton1",
               "onClick": "{{Select.run()}}",
-              "buttonColor": "#93BC4D",
+              "buttonColor": "#811a1b",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634a.svg",
               "topRow": 16,
@@ -1163,7 +1163,7 @@
                     {
                       "widgetName": "Button2",
                       "onClick": "{{closeModal('Modal1')}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 58,
@@ -1198,7 +1198,7 @@
                     {
                       "widgetName": "Button3",
                       "onClick": "{{closeModal('Modal1')}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 58,

@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 742,
+          "rightColumn": 619,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -258,7 +258,7 @@
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
                       "onClick": "{{update.run(() => navigateTo('camera_view', {}), () => showAlert('Failed to submit data','error'))}}",
-                      "buttonColor": "#92BC4C",
+                      "buttonColor": "#811a1b",
                       "dynamicPropertyPathList": [
                         {
                           "key": "onClick"
@@ -296,7 +296,7 @@
                       "resetFormOnClick": true,
                       "widgetName": "FormButton2",
                       "onClick": "{{resetWidget(\"Form1\",true)}}",
-                      "buttonColor": "#92BC4C",
+                      "buttonColor": "#811a1b",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 48,

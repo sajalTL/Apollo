@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 742,
+          "rightColumn": 619,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -311,7 +311,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "site_id",
+                  "label": "site d",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_id))}}"
                 },
                 "site_name": {
@@ -531,7 +531,7 @@
               "boxShadow": "NONE",
               "widgetName": "IconButton1",
               "onClick": "{{SelectQuery.run()}}",
-              "buttonColor": "#93BC4D",
+              "buttonColor": "#811a1b",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634a.svg",
               "topRow": 17,
@@ -786,7 +786,7 @@
                     {
                       "widgetName": "Button2",
                       "onClick": "{{closeModal('Modal1')}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 36,
@@ -822,7 +822,7 @@
                       "boxShadow": "NONE",
                       "widgetName": "Button3",
                       "onClick": "{{closeModal('Modal1')}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 36,

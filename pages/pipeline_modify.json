@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 742,
+          "rightColumn": 617,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -1229,7 +1229,7 @@
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1Copy",
                               "onClick": "{{ReDeploy_JS2.myFun2()}}",
-                              "buttonColor": "#93BC4D",
+                              "buttonColor": "#811a1b",
                               "dynamicPropertyPathList": [],
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -1243,7 +1243,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 54,
+                              "leftColumn": 52,
                               "dynamicBindingPathList": [],
                               "text": "Re Deploy",
                               "key": "i058ryxwxz",
@@ -1263,7 +1263,7 @@
                               "resetFormOnClick": true,
                               "widgetName": "FormButton2Copy",
                               "onClick": "{{closeModal('Modal2')}}",
-                              "buttonColor": "#93BC4D",
+                              "buttonColor": "#811a1b",
                               "dynamicPropertyPathList": [],
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -1277,11 +1277,11 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 24,
+                              "leftColumn": 22,
                               "dynamicBindingPathList": [],
                               "text": "Cancel",
                               "key": "i058ryxwxz",
-                              "rightColumn": 34,
+                              "rightColumn": 32,
                               "isDefaultClickDisabled": true,
                               "widgetId": "x20ewdobzf",
                               "isVisible": true,
@@ -2113,7 +2113,7 @@
                             {
                               "widgetName": "Button2Copy",
                               "onClick": "{{Start_JS.myFun1()}}",
-                              "buttonColor": "#93BC4D",
+                              "buttonColor": "#811a1b",
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "isDisabled"
@@ -2133,7 +2133,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 34,
+                              "leftColumn": 32,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "isDisabled"
@@ -2142,7 +2142,7 @@
                               "text": "Start",
                               "isDisabled": "{{Table1.selectedRow.status===\"Active\"}}",
                               "key": "m7gdhva5jk",
-                              "rightColumn": 44,
+                              "rightColumn": 42,
                               "isDefaultClickDisabled": true,
                               "widgetId": "uuhwgdtpaj",
                               "isVisible": true,
@@ -2168,12 +2168,12 @@
                               "animateLoading": true,
                               "parentColumnSpace": 10.0065673828125,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 44,
+                              "leftColumn": 42,
                               "dynamicBindingPathList": [],
                               "text": "Remove",
                               "isDisabled": false,
                               "key": "m7gdhva5jk",
-                              "rightColumn": 54,
+                              "rightColumn": 52,
                               "isDefaultClickDisabled": true,
                               "widgetId": "p17m6ru2lf",
                               "isVisible": true,
@@ -2927,7 +2927,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#92BC4C",
+                  "buttonColor": "#811a1b",
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
@@ -2970,7 +2970,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#92BC4C",
+                  "buttonColor": "#811a1b",
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
@@ -3156,7 +3156,7 @@
               "boxShadow": "NONE",
               "widgetName": "IconButton1",
               "onClick": "{{Select.run()}}",
-              "buttonColor": "#93BC4D",
+              "buttonColor": "#811a1b",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634a.svg",
               "topRow": 16,

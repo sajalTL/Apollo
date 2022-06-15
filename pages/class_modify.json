@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 742,
+          "rightColumn": 617,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -291,7 +291,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#92BC4C",
+                  "buttonColor": "#811a1b",
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
@@ -472,7 +472,7 @@
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#92BC4C",
+                  "buttonColor": "#811a1b",
                   "menuColor": "#03B365",
                   "labelColor": "#FFFFFF",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
@@ -657,7 +657,7 @@
               "boxShadow": "NONE",
               "widgetName": "IconButton1",
               "onClick": "{{Select.run()}}",
-              "buttonColor": "#93BC4D",
+              "buttonColor": "#811a1b",
               "displayName": "Icon Button",
               "iconSVG": "/static/media/icon.1a0c634a.svg",
               "topRow": 16,
@@ -919,7 +919,7 @@
                     {
                       "widgetName": "Button2",
                       "onClick": "{{Modify.run(() => Select.run(() => closeModal('Modal1')), () => {})}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "dynamicPropertyPathList": [
                         {
                           "key": "onClick"
@@ -959,7 +959,7 @@
                     {
                       "widgetName": "Button3",
                       "onClick": "{{closeModal('Modal1')}}",
-                      "buttonColor": "#93BC4D",
+                      "buttonColor": "#811a1b",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
                       "topRow": 36,
