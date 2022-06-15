@@ -29,6 +29,10 @@
         {
           "key": "all",
           "value": "true"
+        },
+        {
+          "key": "content-type",
+          "value": "application/json"
         }
       ],
       "encodeParamsToggle": true,
@@ -50,7 +54,7 @@
         }
       ],
       "formData": {
-        "apiContentType": "multipart/form-data"
+        "apiContentType": "application/json"
       }
     },
     "executeOnLoad": true,
