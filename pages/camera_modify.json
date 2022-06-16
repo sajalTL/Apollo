@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 619,
+          "rightColumn": 742,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -184,6 +184,8 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "camera_id",
+                "area_name",
+                "site_name",
                 "area_id",
                 "camera_type",
                 "manufacturer",
@@ -196,7 +198,6 @@
                 "rtsp_url",
                 "created_by",
                 "created_date",
-                "area_name",
                 "status",
                 "customColumn1"
               ],
@@ -275,6 +276,9 @@
                 },
                 {
                   "key": "primaryColumns.description.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_name.computedValue"
                 }
               ],
               "leftColumn": 5,
@@ -418,7 +422,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Area_name",
+                  "label": "Area",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_name))}}"
                 },
                 "camera_type": {
@@ -556,6 +560,23 @@
                   "isDerived": false,
                   "label": "description",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.description))}}"
+                },
+                "site_name": {
+                  "index": 14,
+                  "width": 150,
+                  "id": "site_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Site",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
                 }
               },
               "delimiter": ",",
@@ -607,7 +628,7 @@
                 "task": 245,
                 "step": 62,
                 "status": 75,
-                "area_id": 60,
+                "area_id": 96,
                 "area_name": 112,
                 "area_description": 128,
                 "created_by": 102,
@@ -1314,7 +1335,7 @@
                   "displayName": "Canvas",
                   "widgetId": "6lh0fx3hp5",
                   "topRow": 0,
-                  "bottomRow": 570,
+                  "bottomRow": 620,
                   "parentRowSpace": 1,
                   "isVisible": true,
                   "type": "CANVAS_WIDGET",
@@ -1332,13 +1353,13 @@
                     {
                       "widgetName": "Form1Copy",
                       "backgroundColor": "white",
-                      "rightColumn": 61,
+                      "rightColumn": 62,
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d1.svg",
                       "widgetId": "af0svnanvn",
                       "topRow": 0,
-                      "bottomRow": 55,
+                      "bottomRow": 60,
                       "parentRowSpace": 10,
                       "isVisible": true,
                       "type": "FORM_WIDGET",
@@ -1348,7 +1369,7 @@
                       "isLoading": false,
                       "animateLoading": true,
                       "parentColumnSpace": 11.40625,
-                      "leftColumn": 0,
+                      "leftColumn": 1,
                       "children": [
                         {
                           "widgetName": "Canvas3Copy",
@@ -1358,7 +1379,7 @@
                           "widgetId": "5sv2rjvb7m",
                           "containerStyle": "none",
                           "topRow": 0,
-                          "bottomRow": 520,
+                          "bottomRow": 600,
                           "parentRowSpace": 1,
                           "isVisible": true,
                           "type": "CANVAS_WIDGET",
@@ -1373,13 +1394,56 @@
                           "leftColumn": 0,
                           "children": [
                             {
+                              "widgetName": "site",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Site",
+                              "topRow": 8,
+                              "bottomRow": 15,
+                              "parentRowSpace": 10,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "{{Table1.selectedRow.site_name}}",
+                              "animateLoading": true,
+                              "parentColumnSpace": 9.84619140625,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
+                                }
+                              ],
+                              "options": "{{SiteName.data.map(c => ({label: c.site_name, value: c.site_id}))}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "zy50x53cg7",
+                              "isRequired": true,
+                              "rightColumn": 30,
+                              "widgetId": "7eo5bgzkg7",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "5sv2rjvb7m",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "onOptionChange": "{{AreaName.run()}}"
+                            },
+                            {
                               "widgetName": "manufacturer",
                               "isFilterable": true,
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
                               "labelText": "Manufacturer",
-                              "topRow": 7,
-                              "bottomRow": 14,
+                              "topRow": 15,
+                              "bottomRow": 22,
                               "parentRowSpace": 10,
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
@@ -1399,7 +1463,7 @@
                               "isDisabled": false,
                               "key": "zy50x53cg7",
                               "isRequired": true,
-                              "rightColumn": 63,
+                              "rightColumn": 64,
                               "widgetId": "x7pq80ikkk",
                               "isVisible": true,
                               "version": 1,
@@ -1419,8 +1483,8 @@
                               ],
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
-                              "topRow": 46,
-                              "bottomRow": 50,
+                              "topRow": 54,
+                              "bottomRow": 58,
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
@@ -1429,11 +1493,11 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 44,
+                              "leftColumn": 43,
                               "dynamicBindingPathList": [],
                               "text": "Submit",
                               "key": "rmij4qbcu5",
-                              "rightColumn": 60,
+                              "rightColumn": 59,
                               "isDefaultClickDisabled": true,
                               "widgetId": "gmb06y38pb",
                               "isVisible": true,
@@ -1452,8 +1516,8 @@
                               "buttonColor": "#811a1b",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
-                              "topRow": 46,
-                              "bottomRow": 50,
+                              "topRow": 54,
+                              "bottomRow": 58,
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
@@ -1522,8 +1586,8 @@
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
                               "labelText": "Camera Type",
-                              "topRow": 7,
-                              "bottomRow": 14,
+                              "topRow": 8,
+                              "bottomRow": 15,
                               "parentRowSpace": 10,
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
@@ -1532,7 +1596,7 @@
                               "animateLoading": true,
                               "parentColumnSpace": 9.84619140625,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 0,
+                              "leftColumn": 34,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultOptionValue"
@@ -1543,7 +1607,7 @@
                               "isDisabled": false,
                               "key": "zy50x53cg7",
                               "isRequired": true,
-                              "rightColumn": 30,
+                              "rightColumn": 63,
                               "widgetId": "g7j2vxkqu2",
                               "isVisible": true,
                               "version": 1,
@@ -1557,8 +1621,8 @@
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
                               "labelText": "FPS",
-                              "topRow": 22,
-                              "bottomRow": 29,
+                              "topRow": 30,
+                              "bottomRow": 37,
                               "parentRowSpace": 10,
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
@@ -1662,8 +1726,8 @@
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
                               "labelText": "Process Type",
-                              "topRow": 29,
-                              "bottomRow": 36,
+                              "topRow": 36,
+                              "bottomRow": 43,
                               "parentRowSpace": 10,
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
@@ -1672,7 +1736,7 @@
                               "animateLoading": true,
                               "parentColumnSpace": 9.84619140625,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 34,
+                              "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "defaultOptionValue"
@@ -1683,7 +1747,7 @@
                               "isDisabled": false,
                               "key": "zy50x53cg7",
                               "isRequired": false,
-                              "rightColumn": 64,
+                              "rightColumn": 30,
                               "widgetId": "qmxrs016o4",
                               "isVisible": true,
                               "version": 1,
@@ -1695,8 +1759,8 @@
                               "widgetName": "rtsp_url",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
-                              "topRow": 40,
-                              "bottomRow": 44,
+                              "topRow": 47,
+                              "bottomRow": 51,
                               "parentRowSpace": 10,
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
@@ -1738,8 +1802,8 @@
                               "widgetName": "model",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
-                              "topRow": 18,
-                              "bottomRow": 22,
+                              "topRow": 26,
+                              "bottomRow": 30,
                               "tooltip": "",
                               "parentRowSpace": 10,
                               "autoFocus": false,
@@ -1779,8 +1843,8 @@
                               "widgetName": "Text2Copy",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 14,
-                              "bottomRow": 18,
+                              "topRow": 22,
+                              "bottomRow": 26,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -1810,8 +1874,8 @@
                               "widgetName": "Text3",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b52.svg",
-                              "topRow": 36,
-                              "bottomRow": 40,
+                              "topRow": 43,
+                              "bottomRow": 47,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -1954,19 +2018,33 @@
           ],
           [
             {
-              "id": "camera_modify_AreaName",
-              "name": "AreaName",
+              "id": "camera_modify_SiteName",
+              "name": "SiteName",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "camera_modify_rtsp",
               "name": "rtsp",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "camera_modify_AreaName",
+              "name": "AreaName",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "site.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
@@ -2017,7 +2095,8 @@
           "model",
           "process_type",
           "resolution",
-          "rtsp_url"
+          "rtsp_url",
+          "site"
         ],
         "validOnPageLoadActions": true,
         "id": "camera_modify",

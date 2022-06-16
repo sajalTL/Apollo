@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 619,
+          "rightColumn": 742,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -396,17 +396,13 @@
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
                       "leftColumn": 32,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "validation"
-                        }
-                      ],
+                      "dynamicBindingPathList": [],
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "placeholderText": "Area Name",
                       "isDisabled": false,
                       "key": "6ukc8742a8",
-                      "validation": "{{!area.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
+                      "validation": "",
                       "isRequired": true,
                       "rightColumn": 59,
                       "widgetId": "4gdoon5jj5",
@@ -546,16 +542,6 @@
             {
               "id": "area_add_sites",
               "name": "sites",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "area_add_area",
-              "name": "area",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

@@ -17,14 +17,20 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT area_id, area_name, status, area_description FROM area_ref \n"
+      "body": "SELECT area_id, area_name FROM area_ref\nwhere site_id = {{Select1Copy1.selectedOptionValue}};\n"
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Select1Copy1.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

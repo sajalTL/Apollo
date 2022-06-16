@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT camera_master.camera_id, camera_master.area_id, camera_master.camera_type, camera_master.manufacturer, camera_master.model, camera_master.resolution, camera_master.fps, camera_master.ir_enabled, camera_master.description, camera_master.process_type, camera_master.rtsp_url, camera_master.created_by, camera_master.created_date, area_ref.area_name, camera_master.status, camera_master.description\nFROM camera_master\nINNER JOIN area_ref\nON camera_master.area_id = area_ref.area_id\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
+      "body": "SELECT camera_master.camera_id, camera_master.area_id, camera_master.camera_type, camera_master.manufacturer, camera_master.model, camera_master.resolution, camera_master.fps, camera_master.ir_enabled, camera_master.description, camera_master.process_type, camera_master.rtsp_url, camera_master.created_by, camera_master.created_date, area_ref.area_name, site_ref.site_name, camera_master.status, camera_master.description\nFROM camera_master\nINNER JOIN area_ref\nON camera_master.area_id = area_ref.area_id\nINNER JOIN site_ref\nON camera_master.site_id = site_ref.site_id\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
       "pluginSpecifiedTemplates": [
         {
           "value": false

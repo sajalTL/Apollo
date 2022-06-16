@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "area",
+    "name": "SiteName",
     "datasource": {
       "pluginId": "mysql-plugin",
       "messages": [],
@@ -12,14 +12,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "area_add",
+    "pageId": "camera_modify",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select area_name from area_ref;"
+      "body": "select site_name, site_id  from site_ref;"
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -30,7 +30,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "area_add_area",
+  "id": "camera_modify_SiteName",
   "deleted": false,
-  "gitSyncId": "6225932e52df83079ac94bc5_6225e43d52df83079ac94beb"
+  "gitSyncId": "6225932e52df83079ac94bc5_62aad9009c18654bb5892ffb"
 }

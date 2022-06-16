@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update camera_master\nset area_id = '{{area.selectedOptionValue}}',\ncamera_type = '{{camera_type.selectedOptionValue}}', \nmanufacturer = '{{manufacturer.selectedOptionValue}}',\nmodel = '{{model.text}}',\nresolution = '{{resolution.selectedOptionValue}}',\nfps = '{{fps.selectedOptionValue}}',\nir_enabled = '{{ir_enabled.selectedOptionValue}}',\nprocess_type = '{{process_type.selectedOptionValue}}',\nrtsp_url = '{{rtsp_url.text}}',\nedited_by = {{edited_by.text}},\nedited_date = current_timestamp()\nwhere camera_id = {{Table1.selectedRow.camera_id}};"
+      "body": "Update camera_master\nset area_id = '{{area.selectedOptionValue}}',\nsite_id = '{{site.selectedOptionValue}}',\ncamera_type = '{{camera_type.selectedOptionValue}}', \nmanufacturer = '{{manufacturer.selectedOptionValue}}',\nmodel = '{{model.text}}',\nresolution = '{{resolution.selectedOptionValue}}',\nfps = '{{fps.selectedOptionValue}}',\nir_enabled = '{{ir_enabled.selectedOptionValue}}',\nprocess_type = '{{process_type.selectedOptionValue}}',\nrtsp_url = '{{rtsp_url.text}}',\nedited_by = {{edited_by.text}},\nedited_date = current_timestamp()\nwhere camera_id = {{Table1.selectedRow.camera_id}};"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -39,7 +39,8 @@
       "model.text",
       "process_type.selectedOptionValue",
       "resolution.selectedOptionValue",
-      "rtsp_url.text"
+      "rtsp_url.text",
+      "site.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
