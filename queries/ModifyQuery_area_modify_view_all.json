@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update area_ref\nset site_id = {{Select4.selectedOptionValue}},\n    area_name = {{Input1.text}},\n    area_description = {{Input2.text}},\n\t\tstatus = {{Select3.selectedOptionValue}},\n\t\tedited_by = {{Input3.text}},\n\t\tedited_date = current_timestamp()\nwhere area_id = {{Table1.selectedRow.area_id}};"
+      "body": "UPDATE `apollo-dev`.`area_ref` \nSET \n`site_id` = '{{Select4.selectedOptionValue}}',\n`area_name` = '{{Input1.text}}',\n`area_description` = '{{Input2.text}}',\n`status` = '{{Select3.selectedOptionValue}}',\n`edited_by` = '{{Input3.text}}',\n`edited_date` = current_timestamp()\nWHERE (`area_id` = '{{Table1.selectedRow.area_id}}')\n;"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
