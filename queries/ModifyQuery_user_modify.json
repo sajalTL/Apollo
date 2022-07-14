@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update user_ref\nset site_id = {{Select3.selectedOptionValue}},\n    user_email = {{Input2.text}},\nwhere user_id = {{Table1.selectedRow.user_id}};"
+      "body": "Update user_ref\nset site_id = {{Select3.selectedOptionValue}},\n    user_email = {{Input2.text}}\nwhere user_id = {{Table1.selectedRow.user_id}};"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
