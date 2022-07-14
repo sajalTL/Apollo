@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update area_ref\nset site_id = {{Input4.text}},\n    area_name = {{Input1.text}},\n    area_description = {{Input2.text}},\n\t\tedited_by = {{Input3.text}},\n\t\tedited_date = current_timestamp()\nwhere area_id = {{Table1.selectedRow.area_id}};"
+      "body": "Update area_ref\nset site_id = {{Select4.selectedOptionValue}},\n    area_name = {{Input1.text}},\n    area_description = {{Input2.text}},\n\t\tstatus = {{Select3.selectedOptionValue}},\n\t\tedited_by = {{Input3.text}},\n\t\tedited_date = current_timestamp()\nwhere area_id = {{Table1.selectedRow.area_id}};"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -32,7 +32,8 @@
       "Input1.text",
       "Input2.text",
       "Input3.text",
-      "Input4.text",
+      "Select3.selectedOptionValue",
+      "Select4.selectedOptionValue",
       "Table1.selectedRow.area_id"
     ],
     "userSetOnLoad": false,

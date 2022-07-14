@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 619,
+          "rightColumn": 742,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -185,6 +185,7 @@
               "columnOrder": [
                 "area_id",
                 "site_id",
+                "site_name",
                 "area_name",
                 "area_description",
                 "status",
@@ -192,6 +193,7 @@
                 "created_date",
                 "edited_by",
                 "edited_date",
+                "site_description",
                 "customColumn1"
               ],
               "isVisibleDownload": true,
@@ -248,6 +250,12 @@
                 },
                 {
                   "key": "primaryColumns.site_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.site_description.computedValue"
                 }
               ],
               "leftColumn": 5,
@@ -376,7 +384,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "area_id",
+                  "label": "Area ID",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_id))}}"
                 },
                 "area_name": {
@@ -393,7 +401,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "area_name",
+                  "label": "Area name",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_name))}}"
                 },
                 "area_description": {
@@ -410,7 +418,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "area_description",
+                  "label": "Area Description",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_description))}}"
                 },
                 "site_id": {
@@ -423,12 +431,46 @@
                   "textSize": "PARAGRAPH",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "site_id",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_id))}}"
+                },
+                "site_name": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "site_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Site Name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
+                },
+                "site_description": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "site_description",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "site_description",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_description))}}"
                 }
               },
               "delimiter": ",",
@@ -945,7 +987,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "t85pg7lfdi",
-                              "validation": "{{!AreaName.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
+                              "validation": "{{!SiteName.data.map(function dictToarr(index){return index.area_name}).includes(Input1.text)}}",
                               "labelTextSize": "PARAGRAPH",
                               "isRequired": true,
                               "rightColumn": 62,
@@ -1163,40 +1205,42 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "Input4",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "widgetName": "Select4",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "",
                               "topRow": 11,
                               "bottomRow": 15,
                               "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
                               "hideCard": false,
+                              "defaultOptionValue": "{{Table1.selectedRow.site_name}}",
                               "animateLoading": true,
                               "parentColumnSpace": 10.375,
                               "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
                               "leftColumn": 0,
                               "dynamicBindingPathList": [
                                 {
-                                  "key": "defaultText"
+                                  "key": "defaultOptionValue"
+                                },
+                                {
+                                  "key": "options"
                                 }
                               ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
+                              "options": "{{SiteName.data.map(c => ({label: c.site_name, value: c.site_id}))}}",
+                              "placeholderText": "Select option",
                               "isDisabled": false,
-                              "key": "8c8qrahso1",
+                              "key": "uu3q6b4y5l",
                               "isRequired": false,
                               "rightColumn": 31,
-                              "widgetId": "6m60jmf4f3",
+                              "widgetId": "6jps8b7bnv",
                               "isVisible": true,
-                              "label": "",
-                              "version": 2,
+                              "version": 1,
                               "parentId": "u41nbyuimj",
                               "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "iconAlign": "left",
-                              "defaultText": "{{Table1.selectedRow.site_id}}"
+                              "isLoading": false
                             }
                           ],
                           "key": "sktvybe0wu"
@@ -1248,8 +1292,8 @@
           ],
           [
             {
-              "id": "area_modify_view_all_AreaName",
-              "name": "AreaName",
+              "id": "area_modify_view_all_SiteName",
+              "name": "SiteName",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -1272,11 +1316,11 @@
           "Input1",
           "Input2",
           "Input3",
-          "Input4",
           "MainContainer",
           "Select1",
           "Select2",
           "Select3",
+          "Select4",
           "Table1",
           "Text1",
           "Text1Copy",

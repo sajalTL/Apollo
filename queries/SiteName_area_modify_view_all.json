@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "AreaName",
+    "name": "SiteName",
     "datasource": {
       "pluginId": "mysql-plugin",
       "messages": [],
@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select area_name from area_ref;"
+      "body": "select site_name, site_id from site_ref;"
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [],
@@ -30,7 +30,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "area_modify_view_all_AreaName",
+  "id": "area_modify_view_all_SiteName",
   "deleted": false,
   "gitSyncId": "6225932e52df83079ac94bc5_62a853649c18654bb5892ff0"
 }
