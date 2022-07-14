@@ -256,8 +256,13 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{Create.run(() => showAlert('User create successfully.','success'), () => showAlert('Failed to create Area','error'))}}",
+                      "onClick": "{{Create.run(() => navigateTo('user_view', {}), () => showAlert('Failed to create Area','error'))}}\n\n\n",
                       "buttonColor": "#811a1b",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 32,
