@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "user_add",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\tif(RadioGroup1.selectedOptionValue==='L')\n\t\t\t{\n\t\t\tfor (let i = 0;i<appsmith.store.site_id.length;i++){\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tawait CreateLTA.run({org: appsmith.store.site_id[i]})\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t}\n\t\telse \n\t\t\tawait CreateNonLTA.run()\n\t\t\n    .then(()  =>  showAlert(\"User created successfully\") ) \n    .catch(() => showAlert(\"Error occurred\"))\n\t\tnavigateTo('user_view', {})\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "user_add_JSObject1",
+  "deleted": false,
+  "gitSyncId": "6225932e52df83079ac94bc5_62d11cd89c18654bb5893060"
+}

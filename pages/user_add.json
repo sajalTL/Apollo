@@ -223,7 +223,7 @@
                       "placeholderText": "{{RadioGroup1.selectedOptionValue==='L'?'All sites':'Select Site'}}",
                       "isDisabled": "{{RadioGroup1.selectedOptionValue==='L'}}",
                       "key": "zy50x53cg7",
-                      "isRequired": true,
+                      "isRequired": false,
                       "rightColumn": 51,
                       "widgetId": "jolehzq0qt",
                       "isVisible": true,
@@ -269,13 +269,9 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{Create.run(() => navigateTo('user_view', {}), () => showAlert('Failed to create Area','error'))}}\n\n\n",
+                      "onClick": "{{JSObject1.myFun2()}}",
                       "buttonColor": "#811a1b",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 36,
@@ -381,7 +377,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 7.35107421875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 3,
                       "dynamicBindingPathList": [],
@@ -392,6 +392,7 @@
                       "key": "6ukc8742a8",
                       "validation": "",
                       "isRequired": true,
+                      "onTextChanged": "{{storeValue('user_email',Input1.text)}}",
                       "rightColumn": 51,
                       "widgetId": "4gdoon5jj5",
                       "errorMessage": "Invalid Value",
@@ -418,9 +419,14 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 8.2421875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSelectionChange"
+                        }
+                      ],
                       "leftColumn": 3,
                       "dynamicBindingPathList": [],
+                      "onSelectionChange": "{{storeValue('site_id',Select1.options.map(option =>{\n\treturn option.value\n}))}}",
                       "options": [
                         {
                           "label": "LTA  user",
