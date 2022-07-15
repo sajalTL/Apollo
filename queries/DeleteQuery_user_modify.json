@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Query1",
+    "name": "DeleteQuery",
     "datasource": {
       "pluginId": "mysql-plugin",
       "messages": [],
@@ -36,7 +36,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "user_modify_Query1",
+  "id": "user_modify_DeleteQuery",
   "deleted": false,
   "gitSyncId": "6225932e52df83079ac94bc5_62d0e3619c18654bb589305a"
 }
