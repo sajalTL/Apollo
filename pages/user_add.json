@@ -191,9 +191,6 @@
                       "dynamicPropertyPathList": [
                         {
                           "key": "isDisabled"
-                        },
-                        {
-                          "key": "isVisible"
                         }
                       ],
                       "displayName": "Select",
@@ -229,7 +226,7 @@
                       "isRequired": true,
                       "rightColumn": 51,
                       "widgetId": "jolehzq0qt",
-                      "isVisible": "false",
+                      "isVisible": true,
                       "version": 1,
                       "parentId": "t73gczga4g",
                       "renderMode": "CANVAS",
