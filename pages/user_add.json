@@ -64,6 +64,7 @@
                   "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "Image2",
@@ -182,11 +183,15 @@
                   "isLoading": false,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
+                  "dynamicBindingPathList": [],
                   "children": [
                     {
                       "widgetName": "Select1",
                       "isFilterable": false,
                       "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        },
                         {
                           "key": "isVisible"
                         }
@@ -210,18 +215,21 @@
                           "key": "options"
                         },
                         {
-                          "key": "isVisible"
+                          "key": "isDisabled"
+                        },
+                        {
+                          "key": "placeholderText"
                         }
                       ],
                       "options": "{{sites.data.map(c => ({label: c.site_name, value: c.site_id}))}}",
                       "labelStyle": "BOLD",
-                      "placeholderText": "Select site",
-                      "isDisabled": false,
+                      "placeholderText": "{{RadioGroup1.selectedOptionValue==='L'?'All sites':'Select Site'}}",
+                      "isDisabled": "{{RadioGroup1.selectedOptionValue==='L'}}",
                       "key": "zy50x53cg7",
                       "isRequired": true,
                       "rightColumn": 51,
                       "widgetId": "jolehzq0qt",
-                      "isVisible": "{{RadioGroup1.selectedOptionValue!='L'}}",
+                      "isVisible": "false",
                       "version": 1,
                       "parentId": "t73gczga4g",
                       "renderMode": "CANVAS",
