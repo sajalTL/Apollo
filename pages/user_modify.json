@@ -705,7 +705,6 @@
                 "user_id",
                 "site_name",
                 "user_email",
-                "customColumn1",
                 "customColumn2"
               ],
               "isVisibleDownload": true,
@@ -723,21 +722,12 @@
               "parentColumnSpace": 13.765625,
               "dynamicTriggerPathList": [
                 {
-                  "key": "primaryColumns.customColumn1.onClick"
-                },
-                {
                   "key": "primaryColumns.customColumn2.onClick"
                 }
               ],
               "dynamicBindingPathList": [
                 {
                   "key": "tableData"
-                },
-                {
-                  "key": "derivedColumns.customColumn1.buttonLabel"
-                },
-                {
-                  "key": "primaryColumns.customColumn1.buttonLabel"
                 },
                 {
                   "key": "primaryColumns.user_id.computedValue"
@@ -757,27 +747,6 @@
               ],
               "leftColumn": 5,
               "primaryColumns": {
-                "customColumn1": {
-                  "index": 7,
-                  "width": 150,
-                  "id": "customColumn1",
-                  "columnType": "button",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "",
-                  "computedValue": "",
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#811a1b",
-                  "menuColor": "#03B365",
-                  "labelColor": "#FFFFFF",
-                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
-                  "onClick": "{{showModal('modify_user')}}"
-                },
                 "user_id": {
                   "index": 0,
                   "width": 150,
@@ -840,7 +809,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": true,
-                  "label": "",
+                  "label": "Delete",
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
@@ -854,27 +823,6 @@
               "delimiter": ",",
               "key": "ujy2cn5qkr",
               "derivedColumns": {
-                "customColumn1": {
-                  "index": 7,
-                  "width": 150,
-                  "id": "customColumn1",
-                  "columnType": "button",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "",
-                  "computedValue": "",
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "buttonLabelColor": "#FFFFFF",
-                  "buttonColor": "#811a1b",
-                  "menuColor": "#03B365",
-                  "labelColor": "#FFFFFF",
-                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Modify'))}}",
-                  "onClick": "{{showModal('modify_user')}}"
-                },
                 "customColumn2": {
                   "index": 4,
                   "width": 150,
@@ -886,7 +834,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": true,
-                  "label": "",
+                  "label": "Delete",
                   "computedValue": "",
                   "buttonStyle": "rgb(3, 179, 101)",
                   "buttonLabelColor": "#FFFFFF",
