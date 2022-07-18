@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "DELETE FROM user_ref WHERE user_id = {{Table1.selectedRow.user_id}}"
+      "body": "DELETE FROM user_ref \nWHERE user_id= {{Table1.selectedRow.user_id}} ;"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

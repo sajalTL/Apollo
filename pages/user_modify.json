@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 630,
+          "bottomRow": 710,
           "containerStyle": "none",
           "snapRows": 60,
           "parentRowSpace": 1,
@@ -1485,6 +1485,41 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "width": 696
+            },
+            {
+              "widgetName": "Text10",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 65,
+              "bottomRow": 69,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 11.40625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 15,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "shouldTruncate": false,
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{Table1.selectedRows.map(user=> user.user_id\t\t\t\t\t\t\t\t\t\t\t\t ).toString()}}",
+              "key": "1s4e1f11e6",
+              "rightColumn": 31,
+              "textAlign": "LEFT",
+              "widgetId": "dcqkswk065",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "shouldScroll": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
             }
           ]
         },
@@ -1542,6 +1577,7 @@
           "Select3Copy",
           "Table1",
           "Text1",
+          "Text10",
           "Text1Copy",
           "Text2",
           "Text4",
