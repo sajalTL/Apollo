@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE `apollo-dev`.`pipeline_master`\nSET `status` = 'Stopped' \nWHERE (`pipeline_id` = '{{Table1.selectedRow.pipeline_id}}');\n"
+      "body": "UPDATE pipeline_master\nSET `status` = 'Stopped' \nWHERE (`pipeline_id` = '{{Table1.selectedRow.pipeline_id}}');\n"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

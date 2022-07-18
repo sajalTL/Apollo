@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT area_ref.area_id, area_ref.area_name, area_ref.area_description, site_ref.site_name, area_ref.status, area_ref.created_by, area_ref.created_date FROM `apollo-dev`.area_ref\nINNER JOIN site_ref\nON area_ref.site_id = site_ref.site_id\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
+      "body": "SELECT area_ref.area_id, area_ref.area_name,area_ref.area_description, site_ref.site_name, area_ref.status, area_ref.created_by, area_ref.created_date \nFROM area_ref INNER JOIN site_ref\nON area_ref.site_id = site_ref.site_id\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
       "pluginSpecifiedTemplates": [
         {
           "value": false

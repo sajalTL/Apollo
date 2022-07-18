@@ -699,6 +699,7 @@
               "placement": "CENTER"
             },
             {
+              "multiRowSelection": true,
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [

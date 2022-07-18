@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM `apollo-dev`.site_ref\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
+      "body": "SELECT * FROM site_ref\nORDER BY {{Select1.selectedOptionValue}} {{Select2.selectedOptionValue}};",
       "pluginSpecifiedTemplates": [
         {
           "value": false

@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select class_id,class_name from class_master where model_id = {{Select1.selectedOptionValue}};"
+      "body": "select class_id, class_name \nfrom class_master where model_id = {{Select1.selectedOptionValue}};"
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [
