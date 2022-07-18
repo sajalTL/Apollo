@@ -17,7 +17,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update user_ref\nset site_id = {{Select3.selectedOptionValue}},\n    user_email = {{Input2.text}}\nwhere user_id = {{Table1.selectedRow.user_id}};"
+      "body": "DELETE FROM user_ref \nWHERE user_id in ({{Table1.selectedRows.map(user=>user.user_id).join()}});",
+      "pluginSpecifiedTemplates": [
+        {
+          "value": false
+        }
+      ]
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -29,9 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Input2.text",
-      "Select3.selectedOptionValue",
-      "Table1.selectedRow.user_id"
+      "Table1.selectedRows.map(user=>user.user_id).join()"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
