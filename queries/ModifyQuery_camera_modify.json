@@ -17,7 +17,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "Update camera_master\nset area_id = '{{area.selectedOptionValue}}',\nsite_id = '{{site.selectedOptionValue}}',\ncamera_type = '{{camera_type.selectedOptionValue}}', \nmanufacturer = '{{manufacturer.selectedOptionValue}}',\nmodel = '{{model.text}}',\nresolution = '{{resolution.selectedOptionValue}}',\nfps = '{{fps.selectedOptionValue}}',\nir_enabled = '{{ir_enabled.selectedOptionValue}}',\nprocess_type = '{{process_type.selectedOptionValue}}',\nrtsp_url = '{{rtsp_url.text}}',\nedited_by = {{edited_by.text}},\nedited_date = current_timestamp()\nwhere camera_id = {{Table1.selectedRow.camera_id}};"
+      "body": "Update camera_master\nset area_id = '{{area.selectedOptionValue}}',\nsite_id = '{{site.selectedOptionValue}}',\ncamera_type = '{{camera_type.selectedOptionValue}}', \nmanufacturer = '{{manufacturer.selectedOptionValue}}',\nmodel = '{{model.text}}',\nresolution = '{{resolution.selectedOptionValue}}',\nfps = '{{fps.selectedOptionValue}}',\nir_enabled = '{{ir_enabled.selectedOptionValue}}',\nprocess_type = '{{process_type.selectedOptionValue}}',\nrtsp_url = '{{rtsp_url.text}}',\nhcp_id = '{{Input4.text}}',\nedited_by = {{edited_by.text}},\nedited_date = current_timestamp()\nwhere camera_id = {{Table1.selectedRow.camera_id}};"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -29,6 +29,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "Input4.text",
       "Table1.selectedRow.camera_id",
       "area.selectedOptionValue",
       "camera_type.selectedOptionValue",

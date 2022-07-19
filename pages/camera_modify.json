@@ -184,9 +184,8 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "camera_id",
-                "area_name",
-                "site_name",
                 "area_id",
+                "hcp_id",
                 "camera_type",
                 "manufacturer",
                 "model",
@@ -198,6 +197,8 @@
                 "rtsp_url",
                 "created_by",
                 "created_date",
+                "area_name",
+                "site_name",
                 "status",
                 "customColumn1"
               ],
@@ -279,6 +280,9 @@
                 },
                 {
                   "key": "primaryColumns.site_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.hcp_id.computedValue"
                 }
               ],
               "leftColumn": 5,
@@ -577,6 +581,23 @@
                   "isDerived": false,
                   "label": "Site",
                   "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.site_name))}}"
+                },
+                "hcp_id": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "hcp_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "hcp_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.hcp_id))}}"
                 }
               },
               "delimiter": ",",
@@ -1975,6 +1996,83 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "fontSize": "PARAGRAPH"
+                            },
+                            {
+                              "widgetName": "Text9",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 37,
+                              "bottomRow": 41,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.50390625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 34,
+                              "dynamicBindingPathList": [],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "#FFC13D",
+                              "text": "HCP ID",
+                              "key": "k4fp9rqvz5",
+                              "rightColumn": 50,
+                              "textAlign": "LEFT",
+                              "widgetId": "ypc8e09xen",
+                              "isVisible": true,
+                              "fontStyle": "",
+                              "textColor": "#231F20",
+                              "shouldScroll": false,
+                              "version": 1,
+                              "parentId": "5sv2rjvb7m",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "fontSize": "PARAGRAPH"
+                            },
+                            {
+                              "widgetName": "Input4",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 41,
+                              "bottomRow": 45,
+                              "parentRowSpace": 10,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 8.50390625,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onTextChanged"
+                                }
+                              ],
+                              "resetOnSubmit": true,
+                              "leftColumn": 34,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultText"
+                                },
+                                {
+                                  "key": "validation"
+                                }
+                              ],
+                              "labelStyle": "",
+                              "inputType": "NUMBER",
+                              "isDisabled": false,
+                              "key": "uvhaw1emxl",
+                              "validation": "{{!hcp_id.data.map(function dictToarr(index){return index.hcp_id}).includes(Input4.text)}}",
+                              "isRequired": true,
+                              "onTextChanged": "{{hcp_id.run()}}",
+                              "rightColumn": 64,
+                              "widgetId": "xm3iway2xi",
+                              "errorMessage": "Duplicate entry",
+                              "isVisible": true,
+                              "label": "",
+                              "version": 2,
+                              "parentId": "5sv2rjvb7m",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "iconAlign": "left",
+                              "defaultText": "{{Table1.selectedRow.hcp_id}}"
                             }
                           ],
                           "key": "e27zqwtz2u"
@@ -2028,6 +2126,14 @@
           ],
           [
             {
+              "id": "camera_modify_hcp_id",
+              "name": "hcp_id",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "camera_modify_rtsp",
               "name": "rtsp",
               "confirmBeforeExecute": false,
@@ -2069,6 +2175,7 @@
           "Input1",
           "Input2",
           "Input3",
+          "Input4",
           "MainContainer",
           "Modify_camera",
           "Select1",
@@ -2085,6 +2192,7 @@
           "Text6",
           "Text7",
           "Text8",
+          "Text9",
           "area",
           "area_modify_one",
           "camera_type",

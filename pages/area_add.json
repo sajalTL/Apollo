@@ -206,6 +206,7 @@
                         }
                       ],
                       "options": "{{sites.data.map(c => ({label: c.site_name, value: c.site_id}))}}",
+                      "labelStyle": "BOLD",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "zy50x53cg7",

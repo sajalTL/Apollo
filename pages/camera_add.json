@@ -693,6 +693,75 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "onOptionChange": "{{areaquery.run()}}"
+                    },
+                    {
+                      "widgetName": "Text6",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 29,
+                      "bottomRow": 33,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.35107421875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 33,
+                      "dynamicBindingPathList": [],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "HCP ID",
+                      "key": "k4fp9rqvz5",
+                      "rightColumn": 49,
+                      "textAlign": "LEFT",
+                      "widgetId": "dsoaw8q9y0",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "textColor": "#231F20",
+                      "shouldScroll": false,
+                      "version": 1,
+                      "parentId": "oyzpxo1ukv",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "PARAGRAPH"
+                    },
+                    {
+                      "widgetName": "Input3",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 33,
+                      "bottomRow": 37,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.35107421875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 33,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "validation"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "NUMBER",
+                      "isDisabled": false,
+                      "key": "uvhaw1emxl",
+                      "validation": "{{!hcp_id.data.map(function dictToarr(index){return index.hcp_id}).includes(Input3.text)}}",
+                      "isRequired": true,
+                      "rightColumn": 60,
+                      "widgetId": "wzj13oyrfj",
+                      "errorMessage": "Duplicate entry",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "oyzpxo1ukv",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "iconAlign": "left",
+                      "defaultText": ""
                     }
                   ],
                   "key": "e27zqwtz2u"
@@ -820,6 +889,14 @@
           ],
           [
             {
+              "id": "camera_add_hcp_id",
+              "name": "hcp_id",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "camera_add_rtsp",
               "name": "rtsp",
               "confirmBeforeExecute": false,
@@ -852,6 +929,7 @@
           "Image2",
           "Input1",
           "Input2",
+          "Input3",
           "MainContainer",
           "Select1",
           "Select1Copy",
@@ -866,7 +944,8 @@
           "Text2",
           "Text3",
           "Text4",
-          "Text5"
+          "Text5",
+          "Text6"
         ],
         "validOnPageLoadActions": true,
         "id": "camera_add",
